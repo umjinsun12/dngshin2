@@ -1,0 +1,156 @@
+/* Empty. Add your own CSS if you like */
+.slider {
+  height: 100px;
+}
+.slider-slide {
+  color: #000;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+
+.logo {
+  background-color: red;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+.bar {
+	height:69px;
+}
+
+
+.has-header {
+	top: 69px;
+}
+
+.bar .title {
+  height: 69px;
+	line-height: 69px;
+}
+
+.bar .title + .buttons {
+	top: 25px;
+}
+
+.row{
+  padding: 0px;
+}
+
+.col{
+  padding: 0px;
+}
+
+.row + .row{
+  margin-top: 0px;
+}
+
+.item-avatar .item-content > img:first-child{
+  max-width: 50px;
+  max-height: 50px;
+  top:20px;
+  left:14px;
+}
+
+.item-avatar .item-content{
+  padding-left: 82px;
+}
+
+.btngps{
+  width: 38px;
+  height: 30px;
+  top:7px !important;
+}
+
+.btnsearch{
+    width: 47px;
+    height: 30px;
+    top:7px !important;
+}
+
+.searchbar{
+  padding:7px;
+  padding-right: 80px;
+  padding-left: 60px;
+}
+
+
+
+/*탭부분*/
+#css_tabs {
+    font-family:'nanumgothic', '나눔고딕', 'malgun gothic', '맑은 고딕', 'dotum', '돋움', sans-serif
+}
+
+/* 탭 선택 시 표시할 요소(div) 정의(1번 탭 선택 시 첫 번째 div 요소 표시) */
+#css_tabs input:nth-of-type(1), #css_tabs input:nth-of-type(1) ~ div:nth-of-type(1),
+#css_tabs input:nth-of-type(2), #css_tabs input:nth-of-type(2) ~ div:nth-of-type(2)
+{
+    display:none;
+}
+#css_tabs input:nth-of-type(1):checked ~ div:nth-of-type(1),
+#css_tabs input:nth-of-type(2):checked ~ div:nth-of-type(2)
+{
+    display:block
+}
+
+/* 라벨 기본 스타일 지정 */
+#css_tabs > label {
+    display:inline-block;
+    font-variant:small-caps;
+    font-size:.9em;
+    padding:10px;
+    text-align:center;
+    width:49.5%;
+    line-height:1.8em;
+    font-weight:700;
+    border-radius:0;
+    background:white;
+    border-bottom: 1px solid #fcfcfc;
+    color:#777;
+}
+
+#css_tabs > label:hover {
+    cursor:pointer
+}
+
+/* 선택된 라벨, 커서를 올린 라벨 스타일 지정 */
+#css_tabs input:nth-of-type(1):checked ~ label:nth-of-type(1), #css_tabs > label[for=tab1]:hover {
+    color:red;
+    border-bottom: 1px solid red;
+}
+#css_tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), #css_tabs > label[for=tab2]:hover {
+    color:red;
+    border-bottom: 1.5px solid red;
+}
+
+/* 실제 내용이 담긴 div 요소 스타일 지정 */
+#css_tabs .tab1_content, #css_tabs .tab2_content, #css_tabs .tab3_content {
+    width:100%;
+    height:100%
+}
+
+.cal_back{
+  padding:20px;
+  text-align: center;
+}
+
+.cal_btn{
+  height: 60px;
+  margin-bottom: 7px;
+}

@@ -1,0 +1,31 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-background-dark tabs-color-stable">
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="홈" icon-off="ion-home" icon-on="ion-home" href="#/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="법무사상담" icon-off="ion-person-stalker" icon-on="ion-person-stalker" href="#/tab/chats">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="비교견적신청" icon-off="ion-android-search" icon-on="ion-android-search" href="#/tab/req">
+    <ion-nav-view name="tab-req"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="부동산계산기" icon-off="ion-ios-calculator" icon-on="ion-ios-calculator" href="#/tab/calcul">
+    <ion-nav-view name="tab-calcul"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="이용안내" icon-off="ion-android-textsms" icon-on="ion-android-textsms" href="#/tab/dnghelp">
+    <ion-nav-view name="tab-dnghelp"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

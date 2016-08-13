@@ -14,13 +14,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
-
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
   });
+})
+
+.config(function($ionicConfigProvider){
+  $ionicConfigProvider.tabs.position("bottom");
+  $ionicConfigProvider.tabs.style("standard");
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -40,12 +44,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.home', {
+    url: '/home',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-home': {
+        templateUrl: 'templates/tab-home.html',
+        controller: 'HomeCtrl'
       }
     }
   })
@@ -59,27 +63,62 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+
+    .state('tab.bupchat-detail', {
+      url: '/chats/:bupId',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+          templateUrl: 'templates/bup-detail.html',
+          controller: 'BupCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+    .state('tab.bup-detail', {
+      url: '/home/:bupId',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/bup-detail.html',
+          controller: 'BupCtrl'
+        }
+      }
+    })
+
+
+
+
+  .state('tab.req', {
+    url: '/req',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-req': {
+        templateUrl: 'templates/tab-req.html',
+        controller: 'ReqCtrl'
+      }
+    }
+  })
+
+
+  .state('tab.calcul', {
+    url: '/calcul',
+    views: {
+      'tab-calcul': {
+        templateUrl: 'templates/tab-calcul.html',
+        controller: 'CalculCtrl'
+      }
+    }
+  })
+
+  .state('tab.dnghelp', {
+    url: '/dnghelp',
+    views: {
+      'tab-dnghelp': {
+        templateUrl: 'templates/tab-dnghelp.html',
+        controller: 'DnghelpCtrl'
       }
     }
   });
-
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
+
 
 });
