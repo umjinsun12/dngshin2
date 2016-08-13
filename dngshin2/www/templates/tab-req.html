@@ -26,42 +26,86 @@
         <input id="tab2" type="radio" name="tab" checked="checked" />
         <label for="tab1">계약서 사진 입력</label>
         <label for="tab2">직접 정보 입력</label>
-        <div class="tab1_content">Tab1 내용
-            <br />마음은 무덤 웃으며, 수염을 환자의 누그러졌다. 벌써 설렁탕을 국물이 채이는 이 제시한다. 앉았으면 일찍이 관련이 얼굴을 사람은 먼곳을 자기 낸가. 쏟아져 뭔지가 기생 있는 않았다.</div>
+
+        <div class="tab1_content">
+          <div class="list list_style">
+
+            <div class="input_block">
+                <h5>소재지</h5>
+              <label class="scrollview_style item item-input">
+                <input type="text" placeholder="예) 서울특별시 강남구 역삼동 000-0번지" style="display:block">
+              </label>
+            </div>
+
+            <div class="input_block">
+                <h5>매매가액</h5>
+              <label class="scrollview_style item item-input">
+                <input type="text" placeholder="예) 100,000,000" style="display:block">
+              </label>
+            </div>
+
+            <div class="input_block">
+                <h5>계약서 사진입력</h5>
+              <label class="picture_box item item-input">
+                <input type="file" id="take-picture" accept="image/*">
+              </label>
+                <h6 style="color:gray">계약서에 주소와 거래금액 부분을 사진을 촬영하거나 첨부해주세요.</h6>
+            </div>
+
+
+          </div>
+        </div>
+
+
         <div class="tab2_content">
-          <div class="list">
 
 
-
-            <label class="item item-input item-select">
-              <div class="input-label">
-                부동산 면적
-              </div>
-              <select>
+          <div class="list list_style">
+            <div class="input_block">
+                <h5>부동산 면적</h5>
+              <label class="scrollview_style item item-input item-select">
+              <select class="inner_scrollview">
                 <option selected>전용면적 85제곱미터 이하</option>
                 <option>전용면적 85제곱미터 이상</option>
               </select>
-            </label>
+              </label>
+            </div>
 
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">거래금액</span>
+
+            <div class="input_block">
+                <h5>거래금액</h5>
+              <label class="scrollview_style item item-input">
               <input type="text" placeholder="예) 100,000,000" style="display:block">
-            </label>
+              </label>
+            </div>
 
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">소재지 입력</span>
-              <input type="text" placeholder="예) 서울시 강서구 등기동" style="display:block">
-            </label>
+            <div class="input_block">
+                <h5>소재지</h5>
+              <label class="scrollview_style item item-input">
+                <input type="text" placeholder="예) 서울특별시 강남구 역삼동 000-0번지" style="display:block">
+              </label>
+            </div>
 
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">잔금예정일</span>
-              <input type="text" placeholder="잔금 예정일을 입력해주세요." style="display:block">
-            </label>
+            <div class="input_block">
+                <h5>잔금예정일</h5>
+              <label class="scrollview_style item item-input">
+                <input type="text" placeholder="예) 예정일을 입력해 주세요" style="display:block">
+              </label>
+            </div>
 
-            <label class="item item-input item-stacked-label">
-              <span class="input-label">담보대출여부</span>
-              <input type="text" placeholder="담보대출여부를 남겨주세요. 예)ㅇㅇ은행 3억" style="display:block">
-            </label>
+            <div class="input_block">
+                <h5>채권할인율</h5>
+              <label class="scrollview_style item item-input">
+                <input type="text" placeholder="예) 채권할인율을 입력해 주세요" style="display:block">
+              </label>
+            </div>
+
+            <div class="input_block">
+                <h5>남기실 말</h5>
+              <label class="scrollview_style item item-input">
+                <input type="text" placeholder="예) 담보대출여부를 입력해 주세요" style="display:block">
+              </label>
+            </div>
 
             <button class="button button-block button-assertive margin-top">
               견적요청하기

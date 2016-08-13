@@ -121,7 +121,7 @@
     font-weight:700;
     border-radius:0;
     background:white;
-    border-bottom: 1px solid #fcfcfc;
+    border-bottom: 1px solid #cecece;
     color:#777;
 }
 
@@ -153,4 +153,39 @@
 .cal_btn{
   height: 60px;
   margin-bottom: 7px;
+}
+
+/*비교 견적 신청 스타일 시트*/
+
+.list_style{
+  margin : 3px 20px 0px 20px;
+}
+
+.list_style .input_block{
+  margin : 0 0 15px 0;
+}
+
+.scrollview_style{
+  height : 40px;
+}
+
+.inner_scrollview{
+  left : 0;
+  max-width:100%;
+}
+
+.list_radio_btn{
+  height : 40px;
+  width : 45%;
+  float : left;
+  margin : 0px;
+}
+
+.radio_box_style{
+  border : 0px;
+}
+
+.picture_box{
+  height : 160px;
+  
 }
