@@ -116,7 +116,7 @@
     font-size:.9em;
     padding:10px;
     text-align:center;
-    width:49.5%;
+    width:49%;
     line-height:1.8em;
     font-weight:700;
     border-radius:0;
@@ -151,7 +151,7 @@
 }
 
 .cal_btn{
-  height: 60px;
+  width : 100%;
   margin-bottom: 7px;
 }
 
@@ -187,5 +187,18 @@
 
 .picture_box{
   height : 160px;
-  
+  background : url("../img/take_picture.png") no-repeat fixed center;
+  background-position: 50% 63%;
+  background-size : 63px;
+}
+
+/*메인 부분*/
+.custum_back{
+  top:16%;
+}
+
+.custum_title{
+  top : 10%;
+  position : absolute;
+  width : 100%;
 }
