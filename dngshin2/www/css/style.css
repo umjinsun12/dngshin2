@@ -202,3 +202,100 @@
   position : absolute;
   width : 100%;
 }
+
+/*법무사 디테일 부분*/
+.bup_contentbox{
+  padding : 4px 15px 0 15px;
+}
+
+.bup_faceimg{
+  width : 100px;
+  height : 100px;
+  border-radius : 50%;
+  float : left;
+  margin-right : 15px;
+}
+
+/*법무사 정보*/
+.bup_profile_box{
+  padding : 10px 20px 0px 15px;
+  height : 120px;
+}
+
+.bup_detail_profile{
+  padding : 0 0 0 20px;
+  margin-top : 5px;
+}
+
+.bup_detail_profile_name{
+  font-size : 18px;
+  color: #5e5e5e;
+  font-weight : 500;
+  margin-bottom : 5px;
+}
+
+.bup_detail_profile_companyname{
+  font-size : 16px;
+  color : #CA3034;
+  font-weight : 500;
+  margin-bottom : 5px;
+}
+
+.bup_bar{
+  border-bottom : 1px solid;
+  color : #B9B9B9;
+  width : 72%;
+  margin-left : 28%;
+  margin-bottom : 4px;
+}
+
+.bup_detail_profile_address{
+  font-size : 15px;
+  color : #818181;
+  font-weight : 500;
+  margin-bottom : 2px;
+}
+
+.bup_detail_profile_dis{
+  font-size : 13px;
+  color : #818181;
+}
+
+.bup_explain{
+  width : 100%;
+  background-color : #F6F7F7;
+  border-top : 1px solid #EFEFEF;
+  border-bottom : 1px solid #EFEFEF;
+  padding : 0px 15px 15px 15px;
+}
+
+.bup_explain_detail{
+  color : #818181;
+  font-size : 13px;
+}
+
+.bup_review_title .title{
+  font-size : 20px;
+}
+
+.bup_review_title .more{
+  font-size : 12px;
+  color : #7E7E7E;
+}
+
+.bup_review_title{
+  margin-bottom : 12px;
+}
+
+.bup_review_box{
+  padding : 15px 10px 0px 15px;
+}
+
+.star_red{
+  color : red;
+  font-size : 17px;
+}
+
+.bup_review_point .point{
+  font-size : 15px;
+}
