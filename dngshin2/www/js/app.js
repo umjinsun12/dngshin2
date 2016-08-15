@@ -54,6 +54,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.report', {
+    url: '/home/report',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/report.html',
+        controller: 'ReportCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {

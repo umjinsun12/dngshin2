@@ -97,9 +97,7 @@ angular.module('starter.services', [])
 })
 
 .factory('Bup_Comments', function() {
-  // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
   var bup_comments = [{
     doc_id: 0,
     usr_id : '주식전문가',
@@ -109,7 +107,7 @@ angular.module('starter.services', [])
     content : '나쁘지 않은거 같아요.. 추천해주신거에 대한 수익률이 좋습니다.'
   }, {
     doc_id: 0,
-    usr_id : '상암동개미투자자'
+    usr_id : '상암동개미투자자',
     date: '2015.11.04',
     time: '23:14:01',
     point: 8.0,

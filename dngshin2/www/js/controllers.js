@@ -45,7 +45,16 @@ angular.module('starter.controllers', ['starter.services'])
   };
 })
 
-.controller('ReqCtrl', function($scope) {
+.controller('ReqCtrl', function($scope, $ionicPopup) {
+  $scope.showAlert = function() {
+    var alertPopup = $ionicPopup.alert({
+      title: '견적보내기',
+      template: '견적 보내기가 완료되었습니다.'
+    });
+    alertPopup.then(function(res) {
+      console.log('Thank you for not eating my delicious ice cream cone');
+    });
+  };
 })
 
 .controller('CalculCtrl', function($scope) {
@@ -53,7 +62,10 @@ angular.module('starter.controllers', ['starter.services'])
 
 .controller('DnghelpCtrl', function($scope) {
 })
-.controller('BupCtrl', function($scope, $stateParams,Bups,Bup_Comments) {
+.controller('BupCtrl', function($scope, $stateParams,Bups, Bup_Comments) {
   $scope.bup = Bups.get($stateParams.bupId);
   $scope.comments = Bup_Comments.get($stateParams.bupId);
+})
+.controller('ReportCtrl', function($scope, Bups) {
+  $scope.bups = Bups.all();
 });

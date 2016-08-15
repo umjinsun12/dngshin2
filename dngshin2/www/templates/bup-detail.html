@@ -50,7 +50,45 @@
         </div>
       </div>
 
-      
+      <div class="bup_review_detail" ng-repeat="comment in comments">
+        <div class="row">
+          <div class="col detail_id">{{comment.usr_id}}</div>
+          <div>
+            <i class="star_red icon ion-android-star"></i>
+            <i class="star_red icon ion-android-star"></i>
+            <i class="star_red icon ion-android-star"></i>
+            <i class="star_red icon ion-android-star-half"></i>
+            <i class="star_red icon ion-android-star-outline"></i>
+            <i class="star_red">7.5</i>
+          </div>
+        </div>
+        <div class="row detail_date">
+          {{comment.date}}/{{comment.time}}
+        </div>
+        <div class="row">
+          {{comment.content}}
+        </div>
+      </div>
+
+      <button class="button button-block button-assertive margin-top">
+        평가하기
+      </button>
+
+
+      <div class="bup_select_box">
+        <div class="detail_box">
+          <div style="margin-bottom:10px;font-size:15px">등기 업무가 궁금하실때 지금 바로 전화해보세요.</div>
+          <div style="font-size:15px;color:red">OTO법무사에 바로 연결됩니다.</div>
+        </div>
+        <div class="row btn_box">
+          <button class="col button button-outline button-assertive msg_btn">
+            <i class="star_red icon ion-ios-email-outline"></i>  메시지 보내기
+          </button>
+          <button class="col button button-outline button-assertive call_btn" >
+            <i class="star_red icon ion-iphone"></i>  전화문의
+          </button>
+        </div>
+      </div>
 
       </div>
 
