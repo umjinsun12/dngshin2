@@ -64,12 +64,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.buphome-detail', {
+    url: '/home/:bupId',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/bup-detail.html',
+        controller: 'BupCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
         'tab-chats': {
           templateUrl: 'templates/tab-chats.html',
           controller: 'ChatsCtrl'
+        }
+      }
+    })
+
+    .state('tab.chat_report', {
+      url: '/chats/report',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/report.html',
+          controller: 'ReportCtrl'
         }
       }
     })
@@ -103,6 +123,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-req': {
         templateUrl: 'templates/tab-req.html',
         controller: 'ReqCtrl'
+      }
+    }
+  })
+
+  .state('tab.req_report', {
+    url: '/req/report',
+    views: {
+      'tab-req': {
+        templateUrl: 'templates/report.html',
+        controller: 'ReportCtrl'
       }
     }
   })

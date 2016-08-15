@@ -383,6 +383,9 @@
   border-right: 1px solid #9c9c9c;
   padding: 7px 5px 7px 5px;
   font-weight: bold;
+  color : black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .report_detail_box .btn_box .confirm_btn{

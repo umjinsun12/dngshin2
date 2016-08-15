@@ -66,6 +66,20 @@ angular.module('starter.controllers', ['starter.services'])
   $scope.bup = Bups.get($stateParams.bupId);
   $scope.comments = Bup_Comments.get($stateParams.bupId);
 })
-.controller('ReportCtrl', function($scope, Bups) {
+.controller('ReportCtrl', function($scope, Bups, $ionicPopup) {
   $scope.bups = Bups.all();
+
+  $scope.showConfirm = function() {
+    var confirmPopup = $ionicPopup.confirm({
+      title: '정말로 삭제하시겠습니까?',
+      template: '삭제하시면 되돌릴 수 없습니다.'
+    });
+    confirmPopup.then(function(res) {
+      if(res) {
+        console.log('You are sure');
+      } else {
+        console.log('You are not sure');
+      }
+    });
+  };
 });

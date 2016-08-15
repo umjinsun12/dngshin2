@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view view-title="홈">
 
 <ion-nav-title>
   <div class="custum_title">
@@ -28,7 +28,7 @@
     </ion-slide>
   </ion-slide-box>
 
-  <div class="row" style="text-align:center;border-bottom:1px solid #b9b9b9;height:66px">
+  <div class="row" style="text-align:center;border-bottom:1px solid #b9b9b9;height:66px;border-top:1px solid #b9b9b9">
 
     <div class="col" style="border-right:1px solid #b9b9b9;padding:8px;padding-top:20px;font-size:15px;text-align:vertical;">
       <b>5월9일</b>
@@ -59,7 +59,7 @@
 
 
   <ion-list>
-    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap">
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/home/{{chat.id}}">
       <img ng-src="{{chat.face}}">
       <h2>{{chat.name}}</h2>
       <p style="color:red">{{chat.lastText}}</p>
