@@ -57,11 +57,27 @@ angular.module('starter.controllers', ['starter.services'])
   };
 })
 
+//계산기 부분 컨트롤러
 .controller('CalculCtrl', function($scope) {
 })
+.controller('Cal1siseCtrl', function($scope) {
+})
+.controller('Cal2yangCtrl', function($scope) {
+})
+.controller('Cal3chuiCtrl', function($scope) {
+})
+.controller('Cal4jungCtrl', function($scope) {
+})
+.controller('Cal5jeCtrl', function($scope) {
+})
+.controller('Cal6myunCtrl', function($scope) {
+})
+//계산기 컨트롤러 종료
 
 .controller('DnghelpCtrl', function($scope) {
 })
+
+
 .controller('BupCtrl', function($scope, $stateParams,Bups, Bup_Comments) {
   $scope.bup = Bups.get($stateParams.bupId);
   $scope.comments = Bup_Comments.get($stateParams.bupId);

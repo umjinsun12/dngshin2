@@ -1,0 +1,33 @@
+.list_style{
+  margin : 3px 20px 0px 20px;
+}
+
+.list_style .input_block{
+  margin : 0 0 15px 0;
+}
+
+.scrollview_style{
+  height : 40px;
+}
+
+.inner_scrollview{
+  left : 0;
+  max-width:100%;
+}
+
+.list_radio_btn{
+  height : 40px;
+  width : 45%;
+  float : left;
+  margin : 0px;
+}
+
+.radio_box_style{
+  border : 0px;
+}
+
+.picture_box{
+  height: 90px;
+  margin-right: 10px;
+
+}

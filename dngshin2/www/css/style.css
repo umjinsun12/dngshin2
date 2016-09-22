@@ -1,4 +1,9 @@
 /* Empty. Add your own CSS if you like */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body { font-family: 'Nanum Gothic', serif; }
+
 .slider {
   height: 100px;
 }

@@ -1,0 +1,431 @@
+/* Empty. Add your own CSS if you like */
+.slider {
+  height: 100px;
+}
+.slider-slide {
+  color: #000;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+}
+
+
+.logo {
+  background-color: red;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+.bar {
+	height:69px;
+}
+
+
+.has-header {
+	top: 69px;
+}
+
+.bar .title {
+  height: 69px;
+	line-height: 69px;
+}
+
+.bar .title + .buttons {
+	top: 25px;
+}
+
+.row{
+  padding: 0px;
+}
+
+.col{
+  padding: 0px;
+}
+
+.row + .row{
+  margin-top: 0px;
+}
+
+.item-avatar .item-content > img:first-child{
+  max-width: 50px;
+  max-height: 50px;
+  top:20px;
+  left:14px;
+}
+
+.item-avatar .item-content{
+  padding-left: 82px;
+}
+
+.btngps{
+  width: 38px;
+  height: 30px;
+  top:7px !important;
+}
+
+.btnsearch{
+    width: 47px;
+    height: 30px;
+    top:7px !important;
+}
+
+.searchbar{
+  padding:7px;
+  padding-right: 80px;
+  padding-left: 60px;
+}
+
+.popup-body{
+  text-align: center;
+}
+
+/*탭부분*/
+#css_tabs {
+    font-family:'nanumgothic', '나눔고딕', 'malgun gothic', '맑은 고딕', 'dotum', '돋움', sans-serif
+}
+
+/* 탭 선택 시 표시할 요소(div) 정의(1번 탭 선택 시 첫 번째 div 요소 표시) */
+#css_tabs input:nth-of-type(1), #css_tabs input:nth-of-type(1) ~ div:nth-of-type(1),
+#css_tabs input:nth-of-type(2), #css_tabs input:nth-of-type(2) ~ div:nth-of-type(2)
+{
+    display:none;
+}
+#css_tabs input:nth-of-type(1):checked ~ div:nth-of-type(1),
+#css_tabs input:nth-of-type(2):checked ~ div:nth-of-type(2)
+{
+    display:block
+}
+
+/* 라벨 기본 스타일 지정 */
+#css_tabs > label {
+    display:inline-block;
+    font-variant:small-caps;
+    font-size:.9em;
+    padding:10px;
+    text-align:center;
+    width:49%;
+    line-height:1.8em;
+    font-weight:700;
+    border-radius:0;
+    background:white;
+    border-bottom: 1px solid #cecece;
+    color:#777;
+}
+
+#css_tabs > label:hover {
+    cursor:pointer
+}
+
+/* 선택된 라벨, 커서를 올린 라벨 스타일 지정 */
+#css_tabs input:nth-of-type(1):checked ~ label:nth-of-type(1), #css_tabs > label[for=tab1]:hover {
+    color:red;
+    border-bottom: 1px solid red;
+}
+#css_tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), #css_tabs > label[for=tab2]:hover {
+    color:red;
+    border-bottom: 1.5px solid red;
+}
+
+/* 실제 내용이 담긴 div 요소 스타일 지정 */
+#css_tabs .tab1_content, #css_tabs .tab2_content, #css_tabs .tab3_content {
+    width:100%;
+    height:100%
+}
+
+.cal_back{
+  padding:20px;
+  text-align: center;
+}
+
+.cal_btn{
+  width : 100%;
+  margin-bottom: 7px;
+}
+
+/*비교 견적 신청 스타일 시트*/
+
+.list_style{
+  margin : 3px 20px 0px 20px;
+}
+
+.list_style .input_block{
+  margin : 0 0 15px 0;
+}
+
+.scrollview_style{
+  height : 40px;
+}
+
+.inner_scrollview{
+  left : 0;
+  max-width:100%;
+}
+
+.list_radio_btn{
+  height : 40px;
+  width : 45%;
+  float : left;
+  margin : 0px;
+}
+
+.radio_box_style{
+  border : 0px;
+}
+
+.picture_box{
+  height : 160px;
+  background : url("../img/take_picture.png") no-repeat fixed center;
+  background-position: 50% 63%;
+  background-size : 63px;
+}
+
+/*메인 부분*/
+.custum_back{
+  top:16%;
+}
+
+.custum_title{
+  top : 10%;
+  position : absolute;
+  width : 100%;
+}
+
+/*법무사 디테일 부분*/
+.bup_contentbox{
+  padding : 4px 15px 0 15px;
+}
+
+.bup_faceimg{
+  width : 100px;
+  height : 100px;
+  border-radius : 50%;
+  float : left;
+  margin-right : 15px;
+}
+
+/*법무사 정보*/
+.bup_profile_box{
+  padding : 10px 20px 0px 15px;
+  height : 120px;
+}
+
+.bup_detail_profile{
+  padding : 0 0 0 20px;
+  margin-top : 5px;
+}
+
+.bup_detail_profile_name{
+  font-size : 18px;
+  color: #5e5e5e;
+  font-weight : 500;
+  margin-bottom : 5px;
+}
+
+.bup_detail_profile_companyname{
+  font-size : 16px;
+  color : #CA3034;
+  font-weight : 500;
+  margin-bottom : 5px;
+}
+
+.bup_bar{
+  border-bottom : 1px solid;
+  color : #B9B9B9;
+  width : 72%;
+  margin-left : 28%;
+  margin-bottom : 4px;
+}
+
+.bup_detail_profile_address{
+  font-size : 15px;
+  color : #818181;
+  font-weight : 500;
+  margin-bottom : 2px;
+}
+
+.bup_detail_profile_dis{
+  font-size : 13px;
+  color : #818181;
+}
+
+.bup_explain{
+  width : 100%;
+  background-color : #F6F7F7;
+  border-top : 1px solid #EFEFEF;
+  border-bottom : 1px solid #EFEFEF;
+  padding : 0px 15px 15px 15px;
+}
+
+.bup_explain_detail{
+  color : #818181;
+  font-size : 13px;
+}
+
+.bup_review_title .title{
+  font-size : 20px;
+}
+
+.bup_review_title .more{
+  font-size : 12px;
+  color : #7E7E7E;
+}
+
+.bup_review_title{
+  margin-bottom : 12px;
+}
+
+.bup_review_box{
+  padding : 15px 10px 0px 15px;
+}
+
+.star_red{
+  color : red;
+  font-size : 17px;
+}
+
+.bup_review_point{
+  margin-bottom : 10px;
+}
+
+.bup_review_point .point{
+  font-size : 15px;
+}
+
+.bup_review_detail{
+  margin-bottom : 20px;
+  border-bottom : 1px solid #b9b9b9;
+  padding-bottom : 10px;
+}
+
+.bup_review_detail .detail_id{
+  font-size : 15px;
+  font-weight : 600;
+}
+
+.bup_review_detail .detail_date{
+  color : gray;
+  font-size : 13px;
+  margin-bottom : 10px;
+}
+
+.bup_select_box{
+  border : 1px solid #d4d4d4;
+  border-radius : 5px;
+  text-align : center;
+  margin-bottom: 10px;
+}
+
+.bup_select_box .detail_box{
+  padding : 15px 10px 15px 10px;
+}
+
+.msg_btn{
+  margin-right: 10px;
+}
+
+.bup_select_box .btn_box{
+  padding : 10px;
+  border-top : 1px solid #d4d4d4;
+}
+
+/*내 견적서 부분*/
+.report_box{
+  padding: 10px;
+}
+
+.report_detail_box{
+  border: 1px solid #9c9c9c;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.report_detail_box .text_box{
+  padding : 15px 20px 15px 15px;
+}
+
+.report_detail_box .title{
+  font-size: 15px;
+  font-weight: 500;
+  color : #5b5b5b;
+  font-weight: bold;
+}
+
+.report_detail_box .sub_title{
+  color : #818181;
+}
+
+.report_detail_box .btn_box{
+  font-size: 12px;
+  text-align: center;
+  color : #5b5b5b;
+  background-color: #f7f7f7;
+  border-top: 1px solid #9c9c9c;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.report_detail_box .btn_box .delete_btn{
+  border-right: 1px solid #9c9c9c;
+  padding: 7px 5px 7px 5px;
+  font-weight: bold;
+  color : black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.report_detail_box .btn_box .confirm_btn{
+  padding: 7px 5px 7px 5px;
+  font-weight: bold;
+}
+
+.red_text{
+  color : red;
+}
+
+.report_detail_box .bup_box{
+  padding : 10px 0px 5px 5px;
+}
+
+.report_detail_box .bup_box .bup_face{
+  padding :5px 5px 5px 5px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.report_detail_box .bup_box .bup_name{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.report_detail_box .bup_box .bup_company{
+  color : red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.report_detail_box .bup_box .bup_bar{
+  border-bottom: 1px solid #b9b9b9;
+  width: 95%;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.report_detail_box .bup_box .bup_address{
+  color : #818181;
+}

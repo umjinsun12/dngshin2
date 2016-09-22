@@ -1,0 +1,77 @@
+<ion-view view-title="홈">
+
+<ion-nav-title>
+  <div class="custum_title">
+        <a style="position:absolute;left:0px" class="button button-icon icon ion-ios-cart" href="#/tab/home/report">
+          <p style="font-size:10px;margin-top:-8px">
+            견적서
+          </p>
+        </a>
+        <img src="img/logo.png" style="padding-top:5px" height="43px"/>
+      <a style="position:absolute;right:0px" class="button button-icon ion-gear-a">
+        <p style="font-size:10px;margin-top:-6px">
+          환경설정
+        </p>
+      </a>
+  </div>
+</ion-nav-title>
+
+<ion-content scroll="false">
+
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+    <ion-slide>
+      <img src="img/slider1.png" width="100%"/>
+    </ion-slide>
+    <ion-slide>
+    </ion-slide>
+    <ion-slide>
+    </ion-slide>
+  </ion-slide-box>
+
+  <div class="row" style="text-align:center;border-bottom:1px solid #b9b9b9;height:66px;border-top:1px solid #b9b9b9">
+
+    <div class="col" style="border-right:1px solid #b9b9b9;padding:8px;padding-top:20px;font-size:15px;text-align:vertical;">
+      <b>5월9일</b>
+    </div>
+
+    <div class="col" style="border-right:1px solid #b9b9b9;background-color:#f4f4f4;padding:12px">
+      <div class="row">
+      <img src="img/ico_letter.png" height="30px"/>
+      <div class="col" style="text-align:left;padding-left:15px">
+        진행중<br />
+        <b style="color:red;font-size:13px">1523건</b>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-40" style="font-size:13px;background-color:#f4f4f4;padding:5px;padding-top:13px;text-align:left;padding-left:10px">
+      <b>3360</b> 고객 견적참여 <b>8개</b><br />
+      최고 <b>60</b>만 최저 <b>58만</b>
+    </div>
+  </div>
+
+  <div class="row" style="height:100px">
+    <a href="#/tab/req">
+    <img src="img/banner_reg.png" width="100%" height="100px" />
+    </a>
+  </div>
+
+
+
+  <ion-list>
+    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/home/{{chat.id}}">
+      <img ng-src="{{chat.face}}">
+      <h2>{{chat.name}}</h2>
+      <p style="color:red">{{chat.lastText}}</p>
+      <p>5km 떨어짐</p>
+      <img style="width:50px;height:50px;top:20px" class="icon" src="img/ico_talkbtn.png" />
+
+      <ion-option-button class="button-assertive" ng-click="remove(chat)">
+        Delete
+      </ion-option-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+</ion-view>
