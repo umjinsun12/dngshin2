@@ -1,5 +1,22 @@
 angular.module('starter.services', [])
 
+.factory('$localstorage', [$window, function($window){
+  return{
+    set: function(key, value){
+      $window.localStorage[key] = value;
+    },
+    get : function(key, defaultValue){
+      return $window.localStorage[key] || defaultValue;
+    },
+    setObject: function(key, value){
+      $window.localStorage[key] = JSON.stringify(value);
+    },
+    getObject: function(key){
+      return JSON.parse($window.localStorage[key] || '{}');
+    }
+  }
+})
+
 .factory('Userinfo', function() {
   var userinfo = {
     email : null,
@@ -17,9 +34,12 @@ angular.module('starter.services', [])
 
   return{
     all: function(){
-      userinfo
+      return userinfo;
     },
-    setEmail: function(email){userinfo.email = email;},
+    setall: function(uinfo){
+      userinfo = uinfo;
+    },
+    setEmail: function(email){userinfo.email = email;console.log("userinfo.email",userinfo.email)},
     setPtel: function(ptel){userinfo.ptel = ptel;},
     setCompany_name: function(company_name){userinfo.company_name = company_name;},
     setMain_tel: function(main_tel){userinfo.main_tel = main_tel;},
@@ -29,7 +49,6 @@ angular.module('starter.services', [])
     setActivity_area1: function(activity_area1){userinfo.activity_area1 = activity_area1;},
     setActivity_area2: function(activity_area2){userinfo.activity_area2 = activity_area2;},
     setBussiness_num: function(bussiness_num){userinfo.bussiness_num = bussiness_num;},
-    setCompany_name: function(company_name){userinfo.company_name = company_name;},
     setHello_msg: function(hello_msg){userinfo.hello_msg = hello_msg;},
 
     getEmail: function(){return userinfo.email;},
@@ -45,7 +64,7 @@ angular.module('starter.services', [])
     getCompany_name: function(){return userinfo.company_name;},
     getHello_msg: function(){return userinfo.hello_msg;}
 
-  }
+  };
 })
 
 .factory('Chats', function() {

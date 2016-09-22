@@ -8,85 +8,85 @@
     <div class="input_block">
         <h5>기본정보</h5>
       <label class="scrollview_style item item-input basic_infoinput">
-        <input ng-model="useremail" type="email" placeholder="이메일주소" style="display:block">
+        <input ng-model="user.email" type="email" placeholder="이메일주소" style="display:block">
       </label>
       <label class="scrollview_style item item-input basic_infoinput">
         <input type="password" placeholder="비밀번호" style="display:block">
       </label>
       <label class="scrollview_style item item-input basic_infoinput">
-        <input ng-model="userpw" type="password" placeholder="비밀번호확인" style="display:block">
+        <input ng-model="user.password" type="password" placeholder="비밀번호확인" style="display:block">
       </label>
       <label class="scrollview_style item item-input basic_infoinput">
-        <input ng-model="userptel" type="tel" placeholder="휴대전화번호입력" style="display:block">
+        <input ng-model="user.ptel" type="tel" placeholder="휴대전화번호입력" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>상호명</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="usercompany_name" type="text" placeholder="실제상호를 입력해주세요" style="display:block">
+        <input ng-model="user.company_name" type="text" placeholder="실제상호를 입력해주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>대표전화</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="usermain_tel" type="tel" placeholder="전화상담번호를 입력해주세요" style="display:block">
+        <input ng-model="user.main_tel" type="tel" placeholder="전화상담번호를 입력해주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>대표휴대폰</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="usermain_ptel" type="tel" placeholder="문자상담받으실 휴대폰 번호를 입력해주세요" style="display:block">
+        <input ng-model="user.main_ptel" type="tel" placeholder="문자상담받으실 휴대폰 번호를 입력해주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>팩스번호</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="usermain_fax" type="tel" placeholder="팩스번호를 입력해주세요" style="display:block">
+        <input ng-model="user.main_fax" type="tel" placeholder="팩스번호를 입력해주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>주소</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="useraddress" type="text" placeholder="주소를 입력해 주세요." style="display:block">
+        <input ng-model="user.address" type="text" placeholder="주소를 입력해 주세요." style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>활동지역1</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="useractivity_area1" type="text" placeholder="활동 지역1을 입력해 주세요" style="display:block">
+        <input ng-model="user.activity_area1" type="text" placeholder="활동 지역1을 입력해 주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>활동지역2</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="useractivity_area2" type="text" placeholder="활동 지역2를 입력해주세요" style="display:block">
+        <input ng-model="user.activity_area2" type="text" placeholder="활동 지역2를 입력해주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>사업자번호</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="userbussiness_num" type="number" placeholder="사업자번호를 입력해주세요" style="display:block">
+        <input ng-model="user.bussiness_num" type="number" placeholder="사업자번호를 입력해주세요" style="display:block">
       </label>
     </div>
 
     <div class="input_block">
         <h5>인사말</h5>
       <label class="scrollview_style item item-input">
-        <input ng-model="userhello_msg" type="text" placeholder="인사말을 입력해주세요" style="display:block">
+        <input ng-model="user.hello_msg" type="text" placeholder="인사말을 입력해주세요" style="display:block">
       </label>
     </div>
 
     <!--<a href="#/login/main/complete">-->
     <!--</a>-->
-    <button class="button button-block button-light bupreg_btn" ng-click="registeremail(useremail,userpw)">
+    <button class="button button-block button-light bupreg_btn" ng-click="registeremail(user)">
       가입하기
     </button>
 

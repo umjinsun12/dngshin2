@@ -8,28 +8,25 @@
       <div class="list list-inset login_input_detail">
         <label class="item item-input">
           <i class="icon ion-ios-email-outline placeholder-icon"></i>
-          <input type="text" placeholder="이메일 주소">
+          <input ng-model="input_info.email" type="text" placeholder="이메일 주소">
         </label>
         <label class="item item-input">
           <i class="icon ion-ios-locked-outline placeholder-icon"></i>
-          <input type="password" placeholder="비밀번호">
+          <input ng-model="input_info.password" type="password" placeholder="비밀번호">
         </label>
 
-        <a href="#/tab/home">
-          <button class="button button-assertive login_btn" >
+
+          <button class="button button-assertive login_btn" ng-click="memberlogin(input_info)">
             로그인
           </button>
-        </a>
 
         <div class="no_login">
           로그인이 안되나요?
         </div>
 
-        <a ng-click="openModal()">
-        <button class="button button-block button-light bupreg_btn">
+        <button class="button button-block button-light bupreg_btn" ng-click="openModal()">
             법무사 제휴신청
         </button>
-        </a>
 
       </div>
     </div>
