@@ -32,65 +32,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
 
   // Each tab has its own nav history stack:
 
-  .state('tab.home', {
-    url: '/home',
-    views: {
-      'tab-home': {
-        templateUrl: 'templates/tab_home/tab-home.html',
-        controller: 'HomeCtrl'
-      }
-    }
-  })
 
-  .state('tab.report', {
-    url: '/home/report',
-    views: {
-      'tab-home': {
-        templateUrl: 'templates/tab_req/report.html',
-        controller: 'ReportCtrl'
-      }
-    }
-  })
-
-  .state('tab.buphome-detail', {
-    url: '/home/:bupId',
-    views: {
-      'tab-home': {
-        templateUrl: 'templates/tab_buptalk/bup-detail.html',
-        controller: 'BupCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab_buptalk/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-
-    .state('tab.chat_report', {
-      url: '/chats/report',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab_req/report.html',
-          controller: 'ReportCtrl'
-        }
-      }
-    })
-
-    .state('tab.bupchat-detail', {
-      url: '/chats/:bupId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab_buptalk/bup-detail.html',
-          controller: 'BupCtrl'
-        }
-      }
-    })
 
     .state('tab.bup-detail', {
       url: '/home/:bupId',
