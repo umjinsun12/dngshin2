@@ -1,6 +1,6 @@
 angular.module('starter.services', [])
 
-.factory('$localstorage', [$window, function($window){
+.factory('$localstorage', ['$window', function($window){
   return{
     set: function(key, value){
       $window.localStorage[key] = value;
@@ -14,8 +14,8 @@ angular.module('starter.services', [])
     getObject: function(key){
       return JSON.parse($window.localStorage[key] || '{}');
     }
-  }
-})
+  };
+}])
 
 .factory('Userinfo', function() {
   var userinfo = {
