@@ -1,11 +1,4 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,17 +14,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($ionicConfigProvider){
-  $ionicConfigProvider.tabs.position("bottom");
-  $ionicConfigProvider.tabs.style("standard");
-})
+.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
 
-.config(function($stateProvider, $urlRouterProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.backButton.text('');
+  $ionicConfigProvider.backButton.text('').icon('ion-ios7-arrow-left');
+  $ionicConfigProvider.navBar.alignTitle('center');
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -47,7 +36,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/home',
     views: {
       'tab-home': {
-        templateUrl: 'templates/tab-home.html',
+        templateUrl: 'templates/tab_home/tab-home.html',
         controller: 'HomeCtrl'
       }
     }
@@ -57,7 +46,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/home/report',
     views: {
       'tab-home': {
-        templateUrl: 'templates/report.html',
+        templateUrl: 'templates/tab_req/report.html',
         controller: 'ReportCtrl'
       }
     }
@@ -67,7 +56,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/home/:bupId',
     views: {
       'tab-home': {
-        templateUrl: 'templates/bup-detail.html',
+        templateUrl: 'templates/tab_buptalk/bup-detail.html',
         controller: 'BupCtrl'
       }
     }
@@ -77,7 +66,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/chats',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
+          templateUrl: 'templates/tab_buptalk/tab-chats.html',
           controller: 'ChatsCtrl'
         }
       }
@@ -87,7 +76,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/chats/report',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/report.html',
+          templateUrl: 'templates/tab_req/report.html',
           controller: 'ReportCtrl'
         }
       }
@@ -97,7 +86,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/chats/:bupId',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/bup-detail.html',
+          templateUrl: 'templates/tab_buptalk/bup-detail.html',
           controller: 'BupCtrl'
         }
       }
@@ -107,30 +96,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/home/:bupId',
       views: {
         'tab-home': {
-          templateUrl: 'templates/bup-detail.html',
+          templateUrl: 'templates/tab_buptalk/bup-detail.html',
           controller: 'BupCtrl'
         }
       }
     })
-
-
-
-
   .state('tab.req', {
     url: '/req',
     views: {
       'tab-req': {
-        templateUrl: 'templates/tab-req.html',
+        templateUrl: 'templates/tab_req/tab-req.html',
         controller: 'ReqCtrl'
       }
     }
   })
-
   .state('tab.req_report', {
     url: '/req/report',
     views: {
       'tab-req': {
-        templateUrl: 'templates/report.html',
+        templateUrl: 'templates/tab_req/report.html',
         controller: 'ReportCtrl'
       }
     }
@@ -143,7 +127,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/tab-calcul.html',
+        templateUrl: 'templates/tab_calcul/tab-calcul.html',
         controller: 'CalculCtrl'
       }
     }
@@ -153,7 +137,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul/cal1sise',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/cal-1sise.html',
+        templateUrl: 'templates/tab_calcul/cal-1sise.html',
         controller: 'Cal1siseCtrl'
       }
     }
@@ -162,7 +146,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul/cal2yang',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/cal-2yang.html',
+        templateUrl: 'templates/tab_calcul/cal-2yang.html',
         controller: 'Cal2yangCtrl'
       }
     }
@@ -171,7 +155,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul/cal3chui',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/cal-3chui.html',
+        templateUrl: 'templates/tab_calcul/cal-3chui.html',
         controller: 'Cal3chuiCtrl'
       }
     }
@@ -180,7 +164,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul/cal4jung',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/cal-4jung.html',
+        templateUrl: 'templates/tab_calcul/cal-4jung.html',
         controller: 'Cal4jungCtrl'
       }
     }
@@ -189,7 +173,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul/cal5je',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/cal-5je.html',
+        templateUrl: 'templates/tab_calcul/cal-5je.html',
         controller: 'Cal5jeCtrl'
       }
     }
@@ -198,7 +182,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/calcul/cal6myun',
     views: {
       'tab-calcul': {
-        templateUrl: 'templates/cal-6myun.html',
+        templateUrl: 'templates/tab_calcul/cal-6myun.html',
         controller: 'Cal6myunCtrl'
       }
     }
@@ -210,7 +194,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/dnghelp',
     views: {
       'tab-dnghelp': {
-        templateUrl: 'templates/tab-dnghelp.html',
+        templateUrl: 'templates/tab_help/tab-dnghelp.html',
         controller: 'DnghelpCtrl'
       }
     }

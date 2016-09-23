@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['firebase'])
 
 .factory('Bups', function() {
   // Might use a resource here that returns a JSON array

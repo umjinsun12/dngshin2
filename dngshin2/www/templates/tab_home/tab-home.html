@@ -1,7 +1,5 @@
 <ion-view view-title="홈">
-
 <ion-nav-title>
-  <div class="custum_title">
         <a style="position:absolute;left:0px" class="button button-icon icon ion-ios-cart" href="#/tab/home/report">
           <p style="font-size:10px;margin-top:-8px">
             견적서
@@ -13,14 +11,13 @@
           환경설정
         </p>
       </a>
-  </div>
 </ion-nav-title>
 
-<ion-content>
+<ion-content class="main_bg">
 
   <ion-slide-box on-slide-changed="slideChanged(index)">
     <ion-slide>
-      <img src="img/slider1.png" width="100%"/>
+      <img src="img/slider1.png" width="100%" height="100px"/>
     </ion-slide>
     <ion-slide>
     </ion-slide>
@@ -50,13 +47,9 @@
     </div>
   </div>
 
-  <div class="row" style="height:100px">
-    <a href="#/tab/req">
-    <img src="img/banner_reg.png" width="100%" height="100px" />
-    </a>
-  </div>
-
-
+  <a href="#/tab/req">
+    <img src="img/banner_reg.png" width="100%"/>
+  </a>
 
   <ion-list>
     <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/home/{{chat.id}}">

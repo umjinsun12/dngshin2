@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services'])
+angular.module('starter.controllers', ['starter.services', 'firebase'])
 
 .controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, Dash) {
   $scope.next = function() {

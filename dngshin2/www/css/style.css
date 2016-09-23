@@ -4,13 +4,10 @@
 
 body { font-family: 'Nanum Gothic', serif; }
 
-.slider {
-  height: 100px;
-}
 .slider-slide {
   color: #000;
   text-align: center;
-  border-bottom: 1px solid #fff;
+  margin-bottom: -6px;
 }
 
 
@@ -36,23 +33,6 @@ body { font-family: 'Nanum Gothic', serif; }
   display:none;
 }
 
-.bar {
-	height:69px;
-}
-
-
-.has-header {
-	top: 69px;
-}
-
-.bar .title {
-  height: 69px;
-	line-height: 69px;
-}
-
-.bar .title + .buttons {
-	top: 25px;
-}
 
 .row{
   padding: 0px;
@@ -434,4 +414,72 @@ body { font-family: 'Nanum Gothic', serif; }
 
 .report_detail_box .bup_box .bup_address{
   color : #818181;
+}
+
+/* detail**/
+.tabs-striped.tabs-color-stable .tab-item.tab-item-active{
+  margin-top: 0px;
+  border: 0px;
+}
+
+.tabs-striped.tabs-color-stable .tab-item.activated{
+  margin-top: 0px;
+  border: 0px;
+}
+
+.tabs-color-assertive .tab-item{
+  color: #aaaaaa;
+  opacity: 1;
+  padding-top: 8px;
+  font-size: 15px;
+}
+
+.tabs{
+  height: 65px;
+  padding-top: 0px;
+}
+
+.tabs-color-assertive .tab-item.tab-item-active{
+  background-color: #202020;
+}
+
+.tabs-striped.tabs-color-assertive .tab-item{
+  color: #aaaaaa;
+  opacity: 1;
+}
+.has-header{
+  top:60px;
+}
+
+.bar .title{
+  height: 60px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.bar{
+  height: 60px;
+  background-color: red;
+}
+
+.row{
+  padding : 0px;
+}
+
+.col{
+  padding : 0px;
+}
+
+.item-icon-right .icon{
+  font-size: 20px;
+}
+
+.bar-assertive .button.button-clear{
+  margin-top: 3px;
+}
+
+i.ion-arrow-left-c{
+  font-size: 28px;
+  margin-left: 10px;
 }
