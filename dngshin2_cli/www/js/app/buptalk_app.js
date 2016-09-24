@@ -28,5 +28,14 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
           controller: 'BupCtrl'
         }
       }
+    })
+    .state('tab.bup_report', {
+      url: '/chats/report',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/tab_req/report.html',
+          controller: 'ReportCtrl'
+        }
+      }
     });
 });

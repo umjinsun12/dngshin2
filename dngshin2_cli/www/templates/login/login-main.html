@@ -1,0 +1,58 @@
+<ion-view hide-nav-bar="true" class="login_bgimg">
+  <ion-content>
+    <div class="logo_space">
+      <img class="login_logo" src="img/login_logo.png">
+    </div>
+
+    <div class="login_input_div">
+      <div class="list list-inset login_input_detail">
+        <label class="item item-input">
+          <i class="icon ion-ios-email-outline placeholder-icon"></i>
+          <input ng-model="input_info.email" type="text" placeholder="이메일 주소">
+        </label>
+        <label class="item item-input">
+          <i class="icon ion-ios-locked-outline placeholder-icon"></i>
+          <input ng-model="input_info.password" type="password" placeholder="비밀번호">
+        </label>
+
+
+          <button class="button button-assertive login_btn" ng-click="memberlogin(input_info)">
+            로그인
+          </button>
+
+        <div class="no_login">
+          로그인이 안되나요?
+        </div>
+
+        <button class="button button-block button-light bupreg_btn" ng-click="openModal()">
+            법무사 제휴신청
+        </button>
+
+      </div>
+    </div>
+
+
+    <script id="my-modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="item item-left">
+          <h1 class="title modaltitle">이용약관</h1>
+          <a ng-click="closeModal()" style="color:white;font-weight:600">뒤로가기</a>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <h4>제1장 총칙</h4>
+          <h5>제1조(목적)</h5>
+          이 약관은 등기의신(이하 회사)가 온라인으로 제공하는 법무정보 및 이에 부수된 제반 서비스의 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+
+          <h5>제2조(용어의 정의)</h5>
+          A. 이 약관에서 사용하는 용어의 정의는 다음과 같습니다. </br>
+          1. 회사라 함은 온라인을 통
+
+          <button class="button button-block button-light bupreg_btn" ng-click="removeModal()">
+            동의 후 가입합니다.
+          </button>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+  </ion-content>
+
+</ion-view>

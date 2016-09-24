@@ -27,7 +27,8 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+    controller: 'TabCtrl'
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/home');

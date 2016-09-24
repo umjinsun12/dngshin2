@@ -8,5 +8,14 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         controller: 'DnghelpCtrl'
       }
     }
+  })
+  .state('tab.helpreport', {
+    url: '/dnghelp/report',
+    views: {
+      'tab-dnghelp': {
+        templateUrl: 'templates/tab_req/report.html',
+        controller: 'ReportCtrl'
+      }
+    }
   });
 });

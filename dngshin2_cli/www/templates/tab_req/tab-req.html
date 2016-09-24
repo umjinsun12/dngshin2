@@ -1,6 +1,6 @@
 <ion-view view-title="비교견적">
   <ion-nav-title>
-      <a style="position:absolute;left:0px" class="button button-icon icon ion-ios-cart" href="#/tab/home/report">
+      <a style="position:absolute;left:0px" class="button button-icon icon ion-ios-cart" href="#/tab/req/report">
         <p style="font-size:10px;margin-top:-8px">
           견적서
         </p>
@@ -84,39 +84,39 @@
             <div class="input_block">
                 <h5>거래금액</h5>
               <label class="scrollview_style item item-input">
-              <input type="text" placeholder="예) 100,000,000" style="display:block">
+              <input ng-model="reqcon.price" type="text" placeholder="예) 100,000,000" style="display:block">
               </label>
             </div>
 
             <div class="input_block">
                 <h5>소재지</h5>
               <label class="scrollview_style item item-input">
-                <input type="text" placeholder="예) 서울특별시 강남구 역삼동 000-0번지" style="display:block">
+                <input ng-model="reqcon.address" type="text" placeholder="예) 서울특별시 강남구 역삼동 000-0번지" style="display:block">
               </label>
             </div>
 
             <div class="input_block">
                 <h5>잔금예정일</h5>
               <label class="scrollview_style item item-input">
-                <input type="text" placeholder="예) 예정일을 입력해 주세요" style="display:block">
+                <input ng-model="reqcon.remaindate" type="text" placeholder="예) 예정일을 입력해 주세요" style="display:block">
               </label>
             </div>
 
             <div class="input_block">
                 <h5>채권할인율</h5>
               <label class="scrollview_style item item-input">
-                <input type="text" placeholder="예) 채권할인율을 입력해 주세요" style="display:block">
+                <input ng-model="reqcon.chaesale" type="text" placeholder="예) 채권할인율을 입력해 주세요" style="display:block">
               </label>
             </div>
 
             <div class="input_block">
                 <h5>남기실 말</h5>
               <label class="scrollview_style item item-input">
-                <input type="text" placeholder="예) 담보대출여부를 입력해 주세요" style="display:block">
+                <input ng-model="reqcon.comment" type="text" placeholder="예) 담보대출여부를 입력해 주세요" style="display:block">
               </label>
             </div>
 
-            <button class="button button-block button-assertive margin-top" ng-click = "showAlert()">
+            <button class="button button-block button-assertive margin-top" ng-click = "bup_request(2, reqcon)">
               견적요청하기
             </button>
           </div>

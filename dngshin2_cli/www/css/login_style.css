@@ -1,0 +1,105 @@
+/*custum*/
+a{
+  color : black;
+  text-decoration:none;
+}
+
+.modaltitle{
+  color:white;
+}
+
+.bar-assertive .button.button-clear{
+  margin-top: 3px;
+}
+
+i.ion-arrow-left-c{
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.login_bgimg{
+  background-image: url('../img/login_bottombg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+
+.logo_space{
+  text-align: center;
+  padding-top: 80px;
+}
+
+.login_logo{
+  width: 56%;
+}
+
+.login_input_div{
+  margin-top:30px;
+  background-color: transparent;
+}
+
+.login_input_detail
+{
+  width:80%;
+  margin-left: 10%;
+  background-color: transparent;
+}
+
+.login_btn
+{
+  width:100%;
+  margin-top: 20px;
+}
+
+.no_login{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+}
+
+.bupreg_btn::after
+{
+  border: 1px solid red;
+  right : 0px;
+  left : 0px;
+  top : 0px;
+  bottom : 0px;
+  color: red;
+}
+
+.red_text{
+  color:red;
+}
+
+.reg_dis{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: 500;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.input_block{
+  margin-bottom: 30px;
+}
+
+.basic_infoinput{
+  margin-bottom: 10px;
+}
+
+.complete_dis{
+  font-size:20px;
+  padding: 20px;
+  text-align: center;
+  line-height: 27px;
+  font-weight: 600;
+  margin-top: 70px;
+}
+/*setting*/
+.tabs-striped.tabs-color-assertive .tab-item{
+  color:#aaaaaa;
+}

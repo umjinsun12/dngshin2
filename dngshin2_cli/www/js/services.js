@@ -1,5 +1,22 @@
 angular.module('starter.services', ['firebase'])
 
+.factory('$localstorage', ['$window', function($window){
+  return{
+    set: function(key, value){
+      $window.localStorage[key] = value;
+    },
+    get : function(key, defaultValue){
+      return $window.localStorage[key] || defaultValue;
+    },
+    setObject: function(key, value){
+      $window.localStorage[key] = JSON.stringify(value);
+    },
+    getObject: function(key){
+      return JSON.parse($window.localStorage[key] || '{}');
+    }
+  };
+}])
+
 .factory('Bups', function($firebaseArray) {
 
   var ref = firebase.database().ref().child("bupmem");
@@ -17,44 +34,6 @@ angular.module('starter.services', ['firebase'])
     }
   };
 })
-
-.factory('Dash', function() {
-  var chats = [{
-    id: 0,
-    name: '김영종',
-    lastText: 'OTO 법무사사무소 (인천)',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: '최민석',
-    lastText: '법무사사무소 비즈온(연수구)',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: '임종광',
-    lastText: '가원법률사무소 변호사(남구)',
-    face: 'img/adam.jpg'
-  }];
-
-  return {
-    all: function() {
-      return chats;
-    },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
-    },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id == parseInt(chatId)) {
-          return chats[i];
-        }
-      }
-      return null;
-    }
-  };
-
-})
-
 .factory('Bup_Comments', function() {
 
   var bup_comments = [{

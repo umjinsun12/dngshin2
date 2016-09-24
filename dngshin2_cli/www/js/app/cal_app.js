@@ -63,6 +63,15 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         controller: 'Cal6myunCtrl'
       }
     }
+  })
+  .state('tab.calreport', {
+    url: '/calcul/report',
+    views: {
+      'tab-calcul': {
+        templateUrl: 'templates/tab_req/report.html',
+        controller: 'ReportCtrl'
+      }
+    }
   });
   //계산기 부분 종료
 

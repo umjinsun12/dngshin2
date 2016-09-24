@@ -48,7 +48,9 @@
   </div>
 
   <div>
+    <a href="#/tab/req">
     <img src="img/banner_reg.png" class="img_box"/>
+    </a>
   </div>
   <div class="list">
     <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="bup in bups" type="item-text-wrap" href="#/tab/home/{{$index}}">
@@ -63,6 +65,18 @@
       </ion-option-button>
     </ion-item>
   </div>
+
+
+  <script id="login-modal.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar>
+        <h1 class="title">My Modal title</h1>
+      </ion-header-bar>
+      <ion-content>
+        Hello!
+      </ion-content>
+    </ion-modal-view>
+  </script>
 
 </ion-content>
 
