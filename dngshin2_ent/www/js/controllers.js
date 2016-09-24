@@ -51,6 +51,7 @@ angular.module('starter.controllers', ['starter.services', 'firebase'])
          bupmem.activity_area1 = user.activity_area1;
          bupmem.activity_area2 = user.activity_area2;
          bupmem.bussiness_num = user.bussiness_num;
+         bupmem.bup_name = user.bup_name;
          bupmem.hello_msg = user.hello_msg;
          bupmem.$save();
          $state.go('login.complete');
