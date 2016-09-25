@@ -1,6 +1,6 @@
 angular.module('starter.controllers', ['starter.services', 'firebase'])
 
-.controller('TabCtrl', function($scope, $state, $firebaseObject, $localstorage, $ionicPopup, $ionicModal, $firebaseAuth) {
+.controller('TabCtrl', function($scope, $state, $firebaseObject, $localstorage, $ionicPopup, $ionicModal, $firebaseAuth, $firebaseArray) {
   $ionicModal.fromTemplateUrl('login-modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -143,7 +143,9 @@ angular.module('starter.controllers', ['starter.services', 'firebase'])
   };
 })
 
-.controller('ReqCtrl', function($scope, $ionicPopup, $localstorage, $firebaseObject, $state) {
+.controller('ReqCtrl', function($scope, $ionicPopup, $localstorage, $firebaseObject, $state, $firebaseArray) {
+
+
   $scope.bup_request = function(type, reqcon) {
     var alertPopup = $ionicPopup.confirm({
       title: '견적보내기',
@@ -152,16 +154,23 @@ angular.module('starter.controllers', ['starter.services', 'firebase'])
     alertPopup.then(function(res) {
       if(res) {
         var reqconRef = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData"));
-        var reqconserver = $firebaseObject(reqconRef);
-        reqconserver.uid = $localstorage.get("authuserData");
-        reqconserver.reqtype = type;
-        reqconserver.price = reqcon.price;
-        reqconserver.address = reqcon.address;
-        reqconserver.remaindate = reqcon.remaindate;
-        reqconserver.chaesale = reqcon.chaesale;
-        reqconserver.conmment = reqcon.comment;
+        var reqconserver = $firebaseArray(reqconRef);
+
         //reqconserver.area = reqcon.area;
-        reqconserver.$save().then(function(){
+        var nowdate = new Date();
+        console.log(nowdate);
+        reqconserver.$add({
+          uid : $localstorage.get("authuserData"),
+          reqtype : type,
+          price : reqcon.price,
+          address : reqcon.address,
+          remaindat : reqcon.remaindate,
+          chaesale : reqcon.chaesale,
+          conmment : reqcon.comment,
+          chk : 'N',
+          date : nowdate.toString(),
+          cadidate_bup : 0
+        }).then(function(){
           $ionicPopup.alert({
             title: '알림',
             template: '<center>견적보내기가 성공하였습니다.</center>'
@@ -208,8 +217,9 @@ angular.module('starter.controllers', ['starter.services', 'firebase'])
   $scope.bup = Bups.get($stateParams.bupId);
   $scope.comments = Bup_Comments.get($stateParams.bupId);
 })
-.controller('ReportCtrl', function($scope, Bups, $ionicPopup) {
-  $scope.bups = Bups.all();
+
+.controller('ReportCtrl', function($scope, Bups, $ionicPopup, $localstorage) {
+
 
   $scope.showConfirm = function() {
     var confirmPopup = $ionicPopup.confirm({
