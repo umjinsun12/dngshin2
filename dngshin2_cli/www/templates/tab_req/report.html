@@ -8,17 +8,17 @@
         <label for="tab2">찜한 법무사 목록</label>
 
         <div class="tab1_content report_box">
-          <div class="report_detail_box">
+          <div class="report_detail_box" ng-repeat="no_reqcon in no_reqcons">
             <div class="text_box">
               <div class="title">
-                부동산소유권등기
+                부동산소유권등기 (<i class="red_text">미완료</i>)
               </div>
               <div class="sub_title">
-                2016년 3월 21일 / 현재지원 법무사 <i class="red_text">12명</i>
+                {{no_reqcon.date}} / 현재지원 법무사 <i class="red_text">12명</i>
               </div>
            </div>
            <div class="btn_box row">
-             <div class="col delete_btn" ng-click="showConfirm()">
+             <div class="col delete_btn" ng-click="remove_req(no_reqcons.indexOf(no_reqcon),'no')">
                삭제하기
              </div>
              <div class="col confirm_btn">
@@ -27,10 +27,10 @@
            </div>
           </div>
 
-          <div class="report_detail_box">
+          <div class="report_detail_box" ng-repeat="yes_reqcon in yes_reqcons">
             <div class="text_box">
               <div class="title">
-                부동산소유권등기
+                부동산소유권등기 (<i class="red_text">완료</i>)
               </div>
               <div class="sub_title">
                 2016년 3월 21일 / 현재지원 법무사 <i class="red_text">12명</i>

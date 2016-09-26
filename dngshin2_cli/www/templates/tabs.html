@@ -15,7 +15,7 @@ navigation history that also transitions its views in and out.
   </ion-tab>
 
   <!-- Account Tab -->
-  <ion-tab title="비교견적신청" ng-click="logchk()" icon-off="ion-android-search" icon-on="ion-android-search">
+  <ion-tab title="비교견적신청" ng-click="logchk('tabreq')" icon-off="ion-android-search" icon-on="ion-android-search">
     <ion-nav-view name="tab-req"></ion-nav-view>
   </ion-tab>
 
@@ -123,7 +123,7 @@ navigation history that also transitions its views in and out.
       <div class="input_block">
           <h5>이름</h5>
         <label class="scrollview_style item item-input">
-          <input ng-model="user.bup_name" type="text" placeholder="성함을 입력해주세요" style="display:block">
+          <input ng-model="user.user_name" type="text" placeholder="성함을 입력해주세요" style="display:block">
         </label>
       </div>
 

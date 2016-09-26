@@ -63,10 +63,28 @@ angular.module('starter.controllers', ['starter.services', 'firebase'])
       });
     };
 })
-.controller('HomeCtrl', function($scope, $localstorage, $state) {
+.controller('HomeCtrl', function($scope, $localstorage, $state, Reports, $window, $firebaseObject, $ionicLoading) {
+  $ionicLoading.show({
+      template: '로딩 중...'
+    }).then(function(){
+       console.log("The loading indicator is now displayed");
+    });
+  var ref = firebase.database().ref().child("reqcontent");
+  var content = $firebaseObject(ref);
+  content.$loaded().then(function(){
+    $ionicLoading.hide()
+    $scope.reports_cnt = Reports.all();
+  });
+
   if($localstorage.get("authData") == null){
     $state.go('login.main');
   }
+  $scope.reports = Reports.all();
+
+
+  $scope.refresh = function() {
+    $window.location.reload();
+  };
 
 })
 .controller('MyinfoCtrl', function($scope, $state, $localstorage, $firebaseObject, $ionicPopup,$ionicLoading) {

@@ -17,6 +17,8 @@ angular.module('starter.services', ['firebase'])
   };
 }])
 
+
+
 .factory('Bups', function($firebaseArray) {
 
   var ref = firebase.database().ref().child("bupmem");

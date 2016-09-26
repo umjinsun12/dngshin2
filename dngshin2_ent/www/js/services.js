@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['firebase'])
 
 .factory('$localstorage', ['$window', function($window){
   return{
@@ -16,6 +16,41 @@ angular.module('starter.services', [])
     }
   };
 }])
+
+.factory('Reports', function($firebaseArray) {
+
+  var ref = firebase.database().ref().child("reqcontent");
+  var contents = $firebaseArray(ref);
+  var reports = [];
+  var report_length = 0;
+
+  contents.$loaded(function(){
+      for(var i=0; i<contents.length ; i++){
+        for(var key in contents[i].no){
+          var tmpObj = contents[i].no[key];
+          var d = new Date(tmpObj.date);
+          tmpObj.date = (d.getFullYear() + '.') + (d.getMonth()+1)+'.'+(d.getDate()+1)+'. ' + d.getHours() + ":" + d.getMinutes();
+          reports.push(tmpObj);
+        }
+      }
+      report_length = reports.length;
+      console.log(report_length);
+  });
+
+  return {
+    all: function() {
+      return reports;
+    },
+    get: function(reportId) {
+       return reports[reportId];
+    },
+    leng: function(){
+      return report_length;
+    }
+  };
+})
+
+
 
 .factory('Userinfo', function() {
   var userinfo = {
