@@ -21,16 +21,23 @@ angular.module('starter.services', ['firebase'])
 
   var ref = firebase.database().ref().child("reqcontent");
   var contents = $firebaseArray(ref);
-  var reports = [];
+  var reports = new Array();
   var report_length = 0;
+  var cnt = 0;
 
   contents.$loaded(function(){
-      for(var i=0; i<contents.length ; i++){
+
+      for(var i=0; i < contents.length ; i++){
         for(var key in contents[i].no){
           var tmpObj = contents[i].no[key];
+          //console.log(tmpObj);
           var d = new Date(tmpObj.date);
           tmpObj.date = (d.getFullYear() + '.') + (d.getMonth()+1)+'.'+(d.getDate()+1)+'. ' + d.getHours() + ":" + d.getMinutes();
+          tmpObj.id = cnt;
+          cnt++;
           reports.push(tmpObj);
+          //reports.push(cnt - 1);
+          //reports[reports.length] = cnt - 1;
         }
       }
       report_length = reports.length;
@@ -42,7 +49,7 @@ angular.module('starter.services', ['firebase'])
       return reports;
     },
     get: function(reportId) {
-       return reports[reportId];
+          return reports[reportId];
     },
     leng: function(){
       return report_length;

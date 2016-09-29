@@ -85,8 +85,13 @@ angular.module('starter.controllers', ['starter.services', 'firebase'])
   $scope.refresh = function() {
     $window.location.reload();
   };
-
 })
+
+.controller('HomeDetailCtrl', function($scope, $localstorage, $state, Reports, $window, $firebaseObject, $ionicLoading, $stateParams) {
+  $scope.report = Reports.get($stateParams.reportId);
+})
+
+
 .controller('MyinfoCtrl', function($scope, $state, $localstorage, $firebaseObject, $ionicPopup,$ionicLoading) {
   if($localstorage.get("authData") == null){
     $state.go('login.main');

@@ -85,6 +85,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+
+  .state('tab.home-detail', {
+    url: '/home/:reportId',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_home/main_detail.html',
+        controller: 'HomeDetailCtrl'
+      }
+    }
+  })
+
+
   .state('tab.myinfo', {
       url: '/myinfo',
       views: {

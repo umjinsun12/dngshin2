@@ -57,3 +57,39 @@
   padding: 10px;
   margin-bottom: 5px;
 }
+
+
+/* home detail style */
+.table_style{
+  border-top: 1px solid #9c9c9c;
+  border-left: 1px solid #9c9c9c;
+  border-right: 1px solid #9c9c9c;
+  background-color: white;
+  font-size: 13px;
+}
+
+.table_row{
+  border-bottom: 1px solid #9c9c9c;
+}
+
+.row .table_left_col{
+  border-right: 1px solid #9c9c9c;
+  padding : 10px;
+  font-weight: 500;
+}
+
+.table_right_col{
+  padding : 10px;
+  color: gray;
+  font-weight: 600;
+}
+
+.main_detail_title{
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.row + .row{
+  margin-top: 0px;
+}

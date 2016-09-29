@@ -1,0 +1,69 @@
+<ion-view view-title="견적요청 정보">
+  <ion-content class="main_bg padding">
+    <div class="main_detail_title">
+      {{report.name}}님의 견적정보
+    </div>
+    <div class="table_style">
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          종류
+        </div>
+        <div class="col table_right_col">
+          아파트 부동산 등기
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          상세종류
+        </div>
+        <div class="col table_right_col">
+          아파트
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          거래금액
+        </div>
+        <div class="col table_right_col">
+          {{report.price}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          소재지
+        </div>
+        <div class="col table_right_col">
+          {{report.address}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          요청일자
+        </div>
+        <div class="col table_right_col">
+          {{report.date}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          잔금예정일
+        </div>
+        <div class="col table_right_col">
+          {{report.remaindat}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          감면조항
+        </div>
+        <div class="col table_right_col">
+          {{report.remaindat}}
+        </div>
+      </div>
+    </div>
+    <button class="button button-block button-light bupreg_btn" ng-click="openModal()">
+        견적서 보내기
+    </button>
+
+  </ion-content>
+</ion-view>
