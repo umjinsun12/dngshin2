@@ -1,0 +1,85 @@
+<ion-view view-title="견적서 입력하기">
+  <ion-content class="main_bg padding">
+    <div class="main_detail_title">
+      {{report.name}}님에게 견적 입력
+    </div>
+    <div class="table_style">
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          취득세
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="취득세를 입력하세요" ng-model="reply.chui">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          지방교육세
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="지방교육세를 입력하세요" ng-model="reply.ji">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          농어촌특별세
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="농어촌특별세를 입력하세요" ng-model="reply.nong">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          인지대
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="인지대를 입력하세요" ng-model="reply.inji">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          증지대
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="증지대를 입력하세요" ng-model="reply.jngji">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          보수료
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="보수료를 입력하세요" ng-model="reply.bosu">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          부가가치세
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="부가가치세를 입력하세요" ng-model="reply.buga">
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          대행료제증명
+        </div>
+        <div class="col input_table">
+          <input class="send_input" type="text" placeholder="대행료제증명을 입력하세요" ng-model="reply.daehang">
+        </div>
+      </div>
+    </div>
+    <div class="main_detail_title">
+      추가말
+    </div>
+    <textarea class="ps_input" rows="6" cols="10" placeholder="추가말을 입력해주세요" ng-model="reply.ps"></textarea>
+
+    <button class="button button-block button-light bupreg_btn" ng-click="send_msg(reply)">
+        작성완료
+    </button>
+    
+    <div>
+      dasjklfadsljflksdj
+    </div>
+  </ion-content>
+</ion-view>

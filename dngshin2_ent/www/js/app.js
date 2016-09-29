@@ -96,6 +96,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+  .state('tab.home-send', {
+    url: '/home/:reportId/send',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_home/main_send.html',
+        controller: 'HomeSendCtrl'
+      }
+    }
+  })
+  .state('tab.home-complete', {
+    url: '/home/:reportId/complete',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_home/main_detail_ok.html',
+        controller: 'HomeCompleteCtrl'
+      }
+    }
+  })
+
 
   .state('tab.myinfo', {
       url: '/myinfo',

@@ -17,31 +17,37 @@ angular.module('starter.services', ['firebase'])
   };
 }])
 
-.factory('Reports', function($firebaseArray) {
+.factory('Reports', function($firebaseArray,$localstorage) {
 
   var ref = firebase.database().ref().child("reqcontent");
   var contents = $firebaseArray(ref);
   var reports = new Array();
+  var report_chks = new Array();
   var report_length = 0;
   var cnt = 0;
 
   contents.$loaded(function(){
-
       for(var i=0; i < contents.length ; i++){
         for(var key in contents[i].no){
           var tmpObj = contents[i].no[key];
-          //console.log(tmpObj);
           var d = new Date(tmpObj.date);
           tmpObj.date = (d.getFullYear() + '.') + (d.getMonth()+1)+'.'+(d.getDate()+1)+'. ' + d.getHours() + ":" + d.getMinutes();
           tmpObj.id = cnt;
-          cnt++;
-          reports.push(tmpObj);
-          //reports.push(cnt - 1);
-          //reports[reports.length] = cnt - 1;
+          tmpObj.key = key;
+          var flag = 0;
+          for(var can_key in tmpObj.candidate_bup){
+            if($localstorage.get("authData") === can_key){
+              flag = 1;
+              report_chks.push(tmpObj);
+              break;
+            }
+          }
+          if(flag === 0){
+            cnt++;
+            reports.push(tmpObj);
+          }
         }
       }
-      report_length = reports.length;
-      console.log(report_length);
   });
 
   return {
@@ -49,10 +55,20 @@ angular.module('starter.services', ['firebase'])
       return reports;
     },
     get: function(reportId) {
+          console.log(reports[reportId]);
           return reports[reportId];
     },
     leng: function(){
       return report_length;
+    },
+    allChks: function(){
+      return report_chks;
+    },
+    getChks :function(report_chkID){
+      return report_chks[report_chkID];
+    },
+    lengChks : function(){
+      return report_chks.length;
     }
   };
 })
