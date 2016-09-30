@@ -1,4 +1,12 @@
 <ion-view view-title="내가 보낸 견적">
+  <ion-nav-title>
+  내가 보낸 견적
+  <a style="position:absolute;right:0px" class="button button-icon ion-refresh" ng-click="refresh()">
+    <p style="font-size:10px;margin-top:-6px">
+      새로고침
+    </p>
+  </a>
+</ion-nav-title>
   <ion-content class="main_bg">
 
     <div class="filter_box row">
@@ -16,6 +24,7 @@
 
     <div class="list_reqcard">
       <div class="reqcard" ng-repeat="report_chk in report_chks">
+      <a href="#/tab/estlist/{{report_chk.id}}">
         <div>
             {{report_chk.name}}님의 부동산 소유권 등기
         </div>
@@ -25,8 +34,8 @@
         <div>
             견적요청일자 {{report_chk.date}}
         </div>
-
       </div>
+      </a>
     </div>
   </ion-content>
 </ion-view>

@@ -1,0 +1,140 @@
+<ion-view view-title="내가 보낸 견적">
+  <ion-content class="main_bg padding">
+    <div class="main_detail_title">
+      {{report.name}}님의 견적정보
+    </div>
+    <div class="table_style">
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          종류
+        </div>
+        <div class="col table_right_col">
+          아파트 부동산 등기
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          상세종류
+        </div>
+        <div class="col table_right_col">
+          아파트
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          거래금액
+        </div>
+        <div class="col table_right_col">
+          {{report.price}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          소재지
+        </div>
+        <div class="col table_right_col">
+          {{report.address}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          요청일자
+        </div>
+        <div class="col table_right_col">
+          {{report.date}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          잔금예정일
+        </div>
+        <div class="col table_right_col">
+          {{report.remaindat}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          감면조항
+        </div>
+        <div class="col table_right_col">
+          {{report.remaindat}}
+        </div>
+      </div>
+    </div>
+
+    <div class="main_detail_title">
+      내가 보낸 견적정보
+    </div>
+    <div class="table_style">
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          취득세
+        </div>
+        <div class="col table_right_col">
+          {{my_est.chui}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          지방교육세
+        </div>
+        <div class="col table_right_col">
+          {{my_est.ji}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          농어촌특별세
+        </div>
+        <div class="col table_right_col">
+          {{my_est.nong}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          인지대
+        </div>
+        <div class="col table_right_col">
+          {{my_est.inji}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          증지대
+        </div>
+        <div class="col table_right_col">
+          {{my_est.jngji}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          보수료
+        </div>
+        <div class="col table_right_col">
+          {{my_est.bosu}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          부가가치세
+        </div>
+        <div class="col table_right_col">
+          {{my_est.buga}}
+        </div>
+      </div>
+      <div class="row table_row">
+        <div class="col-40 table_left_col">
+          합계
+        </div>
+        <div class="col table_right_col">
+
+        </div>
+      </div>
+    </div>
+    <div class="main_detail_title">
+    </div>
+    <textarea class="ps_input" rows="6" cols="10">{{my_est.ps}}</textarea>
+    <div class="blank">
+    </div>
+  </ion-content>
+</ion-view>

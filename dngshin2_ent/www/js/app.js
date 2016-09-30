@@ -136,6 +136,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+    .state('tab.estlist-detail', {
+        url: '/estlist/:estId',
+        views: {
+          'tab-estlist': {
+            templateUrl: 'templates/tab_estlist/est-detail.html',
+            controller: 'EstlistDetailCtrl'
+          }
+        }
+      })
+
   .state('tab.settings', {
         url: '/settings',
         views: {
