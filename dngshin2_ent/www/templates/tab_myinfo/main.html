@@ -2,18 +2,32 @@
   <ion-content class="padding">
     <div class="list list_style">
       <div class="input_block">
-          <h5>업체사진</h5>
-          <div class="row">
-            <label class="picture_box item item-input col">
-              <input type="file" id="take-picture" accept="image/*">
+          <h5>프로필 사진</h5>
+            <!--<label class="picture_box item item-input col">
+              <input type="file" id="take-picture" accept="image/*" ng-click="uploadPhoto()">
             </label>
             <label class="picture_box item item-input col">
               <input type="file" id="take-picture" accept="image/*">
             </label>
             <label class="picture_box item item-input col">
               <input type="file" id="take-picture" accept="image/*">
-            </label>
-          </div>
+            </label>-->
+
+
+            <!--<div>
+              <img ng-src="{{user.imgs.base64}}" width="100">
+              <a class="btn btn-danger btn-block" ng-click="deleteimg()">Delete</a>
+            </div>-->
+
+
+            <!--<input type="file" name="file" class="inputimg" id="nameImg" accept="image/*" onchange="angular.element(this).scope().uploadFile(this)">-->
+            <div>
+              <img ng-src="{{user.imgs.base64}}" />
+              <a class="btn btn-danger btn-block" ng-click="deleteimg()">Delete</a>
+            </div>
+
+            <input id="inputImage" type="file" accept="image/*" image="image1" resize-max-height="250" resize-max-width="250" resize-quality="0.7" resize-type="image/jpg" />
+
       </div>
 
       <div class="input_block">

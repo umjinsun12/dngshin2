@@ -54,7 +54,7 @@
   </div>
   <div class="list">
     <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="bup in bups" type="item-text-wrap" href="#/tab/home/{{$index}}">
-      <img ng-src="{{chat.face}}">
+      <img ng-src="{{bup.imgs.base64}}">
       <h2>{{bup.bup_name}}</h2>
       <p style="color:red">{{bup.company_name}}</p>
       <p>5km 떨어짐</p>
@@ -67,16 +67,7 @@
   </div>
 
 
-  <script id="login-modal.html" type="text/ng-template">
-    <ion-modal-view>
-      <ion-header-bar>
-        <h1 class="title">My Modal title</h1>
-      </ion-header-bar>
-      <ion-content>
-        Hello!
-      </ion-content>
-    </ion-modal-view>
-  </script>
+
 
 </ion-content>
 

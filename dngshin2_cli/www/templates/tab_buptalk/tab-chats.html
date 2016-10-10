@@ -34,7 +34,7 @@
 
  <ion-list>
    <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="bup in bups" type="item-text-wrap" href="#/tab/chats/{{$index}}">
-     <img ng-src="{{bup.face}}">
+     <img ng-src="{{bup.imgs.base64}}">
      <h2>{{bup.bup_name}}</h2>
      <p style="color:red">{{bup.company_name}}</p>
      <p>5km 떨어짐</p>

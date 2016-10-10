@@ -1,8 +1,8 @@
-appCtrl.controller('MyinfoCtrl', function($scope, $state, $localstorage, $firebaseObject, $ionicPopup,$ionicLoading) {
+appCtrl.controller('MyinfoCtrl', function($scope, $state, $localstorage, $firebaseObject, $ionicPopup,$ionicLoading, $window) {
+
   if($localstorage.get("authData") == null){
     $state.go('login.main');
   }
-  console.log($localstorage.get("authData"));
   $ionicLoading.show({
       template: '로딩 중...'
     }).then(function(){
@@ -22,6 +22,8 @@ appCtrl.controller('MyinfoCtrl', function($scope, $state, $localstorage, $fireba
     console.error("Error:", error);
   });
 
+  $scope.storage = $localstorage;
+
 
   $scope.modifyinfo = function(){
     $scope.user.$save();
@@ -31,5 +33,16 @@ appCtrl.controller('MyinfoCtrl', function($scope, $state, $localstorage, $fireba
       template: '<center>내 정보 수정이 완료 되었습니다.</center>'
     });
   }
+
+  var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];
+
+
+
+$scope.deleteimg = function() {
+  $scope.user.imgs = {};
+  $scope.user.$save();
+  $window.location.reload();
+}
+
 
 });
