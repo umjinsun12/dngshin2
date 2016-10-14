@@ -101,7 +101,7 @@ var appctrl = angular.module('starter.controllers', ['starter.services', 'fireba
     var yes_reqconRef = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('yes');
     $scope.no_reqcons = $firebaseArray(no_reqconRef);
     $scope.yes_reqcons = $firebaseArray(yes_reqconRef);
-    console.log($scope.no_reqcons.no);
+    console.log($scope.no_reqcons);
 
     $scope.no_reqcons.$loaded(function(){
       for(var i=0; i<$scope.no_reqcons.length ; i++){

@@ -20,6 +20,16 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     }
   })
 
+  .state('tab.candibup', {
+    url: '/home/report/:reportId',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_req/can-bup.html',
+        controller: 'CandibupCtrl'
+      }
+    }
+  })
+
   .state('tab.buphome-detail', {
     url: '/home/:bupId',
     views: {

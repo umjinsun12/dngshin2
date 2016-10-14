@@ -21,9 +21,11 @@
              <div class="col delete_btn" ng-click="remove_req(no_reqcons.indexOf(no_reqcon),'no')">
                삭제하기
              </div>
-             <div class="col confirm_btn">
+
+             <a href="#/tab/home/report/{{no_reqcon.$id}}" class="col confirm_btn">
                지원 법무사 확인
-             </div>
+             </a>
+
            </div>
           </div>
 
@@ -40,6 +42,7 @@
              <div class="col delete_btn" ng-click="showConfirm()">
                삭제하기
              </div>
+
              <div class="col confirm_btn">
                지원 법무사 확인
              </div>

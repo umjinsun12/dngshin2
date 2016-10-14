@@ -36,6 +36,26 @@ angular.module('starter.services', ['firebase'])
     }
   };
 })
+
+.factory('Reports', function($firebaseArray) {
+
+  var ref = firebase.database().ref().child("reqcontent");
+  var reports = $firebaseArray(ref);
+
+  return {
+    all: function() {
+      return reports;
+    },
+    remove: function(report) {
+      reports.splice(reports.indexOf(report), 1);
+    },
+    get: function(reportId) {
+       return reports[reportId];
+    }
+  };
+})
+
+
 .factory('Bup_Comments', function() {
 
   var bup_comments = [{

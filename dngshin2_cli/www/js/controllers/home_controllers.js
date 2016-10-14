@@ -37,4 +37,9 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
 .controller('BupCtrl', function($scope, $stateParams, Bups, Bup_Comments) {
   $scope.bup = Bups.get($stateParams.bupId);
   $scope.comments = Bup_Comments.get($stateParams.bupId);
+})
+
+//candibupId
+.controller('CandibupCtrl', function($scope, $stateParams, Bups, Bup_Comments) {
+  $scope.report = Bups.get($stateParams.reportId);
 });

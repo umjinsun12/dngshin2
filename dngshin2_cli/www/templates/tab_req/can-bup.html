@@ -1,0 +1,47 @@
+<ion-view view-title="지원 법무사 확인">
+<ion-content>
+  <div class="tab1_content report_box">
+    <div class="report_detail_box">
+      <div class="text_box">
+        <div class="title">
+          부동산소유권등기 (<i class="red_text">미완료</i>)
+        </div>
+        <div class="sub_title">
+          {{no_reqcon.date}} / 현재지원 법무사 <i class="red_text">12명</i>
+        </div>
+     </div>
+     <div class="btn_box row">
+       <div class="col delete_btn" ng-click="remove_req(no_reqcons.indexOf(no_reqcon),'no')">
+         삭제하기
+       </div>
+
+       <a href="#/tab/home/report/candibup" class="col confirm_btn">
+         지원 법무사 확인
+       </a>
+
+     </div>
+    </div>
+
+    <div class="report_detail_box" ng-repeat="yes_reqcon in yes_reqcons">
+      <div class="text_box">
+        <div class="title">
+          부동산소유권등기 (<i class="red_text">완료</i>)
+        </div>
+        <div class="sub_title">
+          2016년 3월 21일 / 현재지원 법무사 <i class="red_text">12명</i>
+        </div>
+     </div>
+     <div class="btn_box row">
+       <div class="col delete_btn" ng-click="showConfirm()">
+         삭제하기
+       </div>
+
+       <div class="col confirm_btn">
+         지원 법무사 확인
+       </div>
+     </div>
+    </div>
+  </div>
+
+</ion-content>
+</ion-view>
