@@ -26,8 +26,7 @@ appctrl.controller('ReqCtrl', function($scope, $ionicPopup, $localstorage, $fire
           remaindat : reqcon.remaindate,
           chaesale : reqcon.chaesale,
           conmment : reqcon.comment,
-          date : nowdate.toString(),
-          cadidate_bup : 0
+          date : nowdate.toString()
         }).then(function(){
           $ionicPopup.alert({
             title: '알림',

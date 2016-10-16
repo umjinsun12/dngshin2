@@ -40,6 +40,20 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
 })
 
 //candibupId
-.controller('CandibupCtrl', function($scope, $stateParams, Bups, Bup_Comments) {
-  $scope.report = Bups.get($stateParams.reportId);
+.controller('CandibupCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {
+
+  var no_reqconRef_candibups = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('no').child($stateParams.reportId).child('candidate_bup');
+  var bupmems = firebase.database().ref().child("bupmem");
+  $scope.candibups = $firebaseArray(no_reqconRef_candibups);
+  var bupmems = $firebaseObject(bupmems);
+
+  $scope.candibups.$loaded().then(function(){
+    for(var i = 0 ; i < $scope.candibups.length ; i++)
+    {
+      console.log($scope.candibups[i].$id);
+      console.log(bupmems[$scope.candibups[i].$id]);
+    }
+
+  });
+
 });

@@ -101,14 +101,23 @@ var appctrl = angular.module('starter.controllers', ['starter.services', 'fireba
     var yes_reqconRef = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('yes');
     $scope.no_reqcons = $firebaseArray(no_reqconRef);
     $scope.yes_reqcons = $firebaseArray(yes_reqconRef);
-    console.log($scope.no_reqcons);
 
     $scope.no_reqcons.$loaded(function(){
       for(var i=0; i<$scope.no_reqcons.length ; i++){
         var d = new Date($scope.no_reqcons[i].date);
         $scope.no_reqcons[i].date = (d.getFullYear() + '년 ') + (d.getMonth()+1)+'월 '+(d.getDate()+1)+'일 ' + d.getHours() + ":" + d.getMinutes();
+        console.log($scope.no_reqcons[i].candidate_bup);
+        var cnt=0;
+        for(var can_bup in $scope.no_reqcons[i].candidate_bup)
+        {
+          cnt++;
+          console.log(can_bup);
+        }
+        $scope.no_reqcons[i].candidate_bup_cnt = cnt;
       }
     });
+
+
   }
 
   $scope.remove_req = function(r_index, type) {
