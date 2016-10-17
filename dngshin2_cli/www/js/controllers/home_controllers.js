@@ -39,21 +39,41 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
   $scope.comments = Bup_Comments.get($stateParams.bupId);
 })
 
+
+
 //candibupId
 .controller('CandibupCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {
 
   var no_reqconRef_candibups = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('no').child($stateParams.reportId).child('candidate_bup');
-  var bupmems = firebase.database().ref().child("bupmem");
-  $scope.candibups = $firebaseArray(no_reqconRef_candibups);
-  var bupmems = $firebaseObject(bupmems);
+  var bupmemreqs = firebase.database().ref().child("bupmem");
+  var candibups = $firebaseArray(no_reqconRef_candibups);
+  var bupmems = $firebaseObject(bupmemreqs);
+  $scope.bupmems = {};
+  $scope.reportId = $stateParams.reportId;
 
-  $scope.candibups.$loaded().then(function(){
-    for(var i = 0 ; i < $scope.candibups.length ; i++)
+  candibups.$loaded().then(function(){
+    for(var i = 0 ; i < candibups.length ; i++)
     {
-      console.log($scope.candibups[i].$id);
-      console.log(bupmems[$scope.candibups[i].$id]);
+      $scope.bupmems[i] = bupmems[candibups[i].$id];
+      $scope.bupmems[i].report = candibups[i];
+      $scope.bupmems[i].report.sum = parseInt($scope.bupmems[i].report.bosu) + parseInt($scope.bupmems[i].report.buga) + parseInt($scope.bupmems[i].report.chui) + parseInt($scope.bupmems[i].report.daehang) + parseInt($scope.bupmems[i].report.inji) + parseInt($scope.bupmems[i].report.ji) + parseInt($scope.bupmems[i].report.jngji) + parseInt($scope.bupmems[i].report.nong);
     }
-
   });
 
+})
+
+.controller('CandibupBupdetailCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {
+  var bupmem_reqs = firebase.database().ref().child("bupmem").child($stateParams.bupId);
+  $scope.bup = $firebaseObject(bupmem_reqs);
+})
+
+.controller('CandibupReplydetailCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {
+  var no_reqconRef_candibups = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('no').child($stateParams.reportId);
+  var no_reqconRef_bupsreport = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('no').child($stateParams.reportId).child('candidate_bup').child($stateParams.bupId);
+  $scope.report = $firebaseObject(no_reqconRef_candibups);
+  console.log($scope.report);
+  $scope.my_est = $firebaseObject(no_reqconRef_bupsreport);
+  $scope.my_est.$loaded().then(function(){
+    $scope.my_est.sum = parseInt($scope.my_est.bosu) + parseInt($scope.my_est.buga) + parseInt($scope.my_est.chui) + parseInt($scope.my_est.daehang) + parseInt($scope.my_est.inji) + parseInt($scope.my_est.ji) + parseInt($scope.my_est.jngji) + parseInt($scope.my_est.nong);
+  });
 });

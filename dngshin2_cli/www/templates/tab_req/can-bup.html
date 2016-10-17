@@ -2,21 +2,24 @@
 <ion-content>
   <div class="tab1_content report_box">
 
-    <div class="report_detail_box">
+    <div class="report_detail_box" ng-repeat="bupmem in bupmems">
       <div class="text_box">
         <div class="title">
-          부동산소유권등기 (<i class="red_text">미완료</i>)
+          {{bupmem.bup_name}} (<i class="red_text">미완료</i>)
         </div>
         <div class="sub_title">
-          {{no_reqcon.date}} / 현재지원 법무사 <i class="red_text">12명</i>
+          {{bupmem.email}}
+        </div>
+        <div class="sub_title">
+          <i class="red_text">{{bupmem.report.sum}}원</i>
         </div>
      </div>
      <div class="btn_box row">
-       <div class="col delete_btn" ng-click="remove_req(no_reqcons.indexOf(no_reqcon),'no')">
-         삭제하기
-       </div>
-       <a href="#/tab/home/report/candibup" class="col confirm_btn">
-         지원 법무사 확인
+       <a href="#/tab/home/report/{{reportId}}/{{bupmem.uid}}/bupdetail" class="col delete_btn">
+         법무사 정보 확인
+       </a>
+       <a href="#/tab/home/report/{{reportId}}/{{bupmem.uid}}/replydetail" class="col confirm_btn">
+         해당 견적서 확인
        </a>
 
      </div>
