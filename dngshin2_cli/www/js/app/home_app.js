@@ -10,6 +10,16 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     }
   })
 
+  .state('tab.home-setting', {
+    url: '/home/setting',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_home/home-setting.html',
+        controller: 'SettingCtrl'
+      }
+    }
+  })
+
   .state('tab.report', {
     url: '/home/report',
     views: {
@@ -61,5 +71,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       }
     }
   });
+
+  //환경설정 정보
 
 });

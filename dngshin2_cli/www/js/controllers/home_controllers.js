@@ -81,4 +81,8 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
   $scope.my_est.$loaded().then(function(){
     $scope.my_est.sum = parseInt($scope.my_est.bosu) + parseInt($scope.my_est.buga) + parseInt($scope.my_est.chui) + parseInt($scope.my_est.daehang) + parseInt($scope.my_est.inji) + parseInt($scope.my_est.ji) + parseInt($scope.my_est.jngji) + parseInt($scope.my_est.nong);
   });
+})
+
+.controller('SettingCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {
+  console.log("setting");
 });

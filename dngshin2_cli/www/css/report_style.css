@@ -10,13 +10,14 @@
 
 .price_title{
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .candi_bar{
   border-bottom : 1px solid;
   color : #B9B9B9;
-  width : 90%;
+  width : 100%;
+  margin-left: -2px;
   margin-bottom : 12px;
   margin-top: 12px;
 }
