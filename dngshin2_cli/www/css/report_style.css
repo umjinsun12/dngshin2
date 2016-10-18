@@ -1,0 +1,22 @@
+.bup_imgs{
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+.candi_buptext{
+  margin-left: 24px;
+}
+
+.price_title{
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.candi_bar{
+  border-bottom : 1px solid;
+  color : #B9B9B9;
+  width : 90%;
+  margin-bottom : 12px;
+  margin-top: 12px;
+}

@@ -1,17 +1,25 @@
 <ion-view view-title="지원 법무사 확인">
 <ion-content>
   <div class="tab1_content report_box">
-
     <div class="report_detail_box" ng-repeat="bupmem in bupmems">
-      <div class="text_box">
-        <div class="title">
-          {{bupmem.bup_name}} (<i class="red_text">미확인</i>)
+      <div class="text_box row">
+        <div class="col-30">
+          <img class="bup_imgs"ng-src="{{bupmem.imgs.base64}}">
         </div>
-        <div class="sub_title">
-          {{bupmem.email}}
-        </div>
-        <div class="sub_title">
-          <i class="red_text">{{bupmem.report.sum}}원</i>
+        <div class="col candi_buptext">
+          <div class="price_title">
+            <i class="red_text">{{bupmem.report.sum}}원</i>
+          </div>
+          <div class="candi_bar"></div>
+          <div class="title">
+            대표법무사({{bupmem.bup_name}})
+          </div>
+          <div class="sub_title">
+            {{bupmem.company_name}}
+          </div>
+          <div class="sub_title">
+            {{bupmem.address}}
+          </div>
         </div>
      </div>
      <div class="btn_box row">
@@ -21,7 +29,6 @@
        <a href="#/tab/home/report/{{reportId}}/{{bupmem.uid}}/replydetail" class="col confirm_btn">
          해당 견적서 확인
        </a>
-
      </div>
     </div>
 

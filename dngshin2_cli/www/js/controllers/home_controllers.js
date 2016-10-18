@@ -62,11 +62,14 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
     }
   });
 
+  console.log($scope.bupmems);
+
 })
 
 .controller('CandibupBupdetailCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {
   var bupmem_reqs = firebase.database().ref().child("bupmem").child($stateParams.bupId);
   $scope.bup = $firebaseObject(bupmem_reqs);
+
 })
 
 .controller('CandibupReplydetailCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $firebaseObject) {

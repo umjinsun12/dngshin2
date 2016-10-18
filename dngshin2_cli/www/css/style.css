@@ -345,10 +345,9 @@ body { font-family: 'Nanum Gothic', serif; }
 }
 
 .report_detail_box .title{
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color : #5b5b5b;
-  font-weight: bold;
 }
 
 .report_detail_box .sub_title{
@@ -482,4 +481,9 @@ body { font-family: 'Nanum Gothic', serif; }
 i.ion-arrow-left-c{
   font-size: 28px;
   margin-left: 10px;
+}
+
+
+.blank{
+  padding-bottom: 30px;
 }
