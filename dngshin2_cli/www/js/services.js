@@ -37,10 +37,12 @@ angular.module('starter.services', ['firebase'])
   };
 })
 
-.factory('Reports', function($firebaseArray) {
+.factory('Reports', function($firebaseArray, $localstorage) {
 
-  var ref = firebase.database().ref().child("reqcontent");
+  var ref = firebase.database().ref().child("reqcontent").child($localstorage.get("authuserData")).child('no');
   var reports = $firebaseArray(ref);
+
+
 
   return {
     all: function() {
@@ -51,6 +53,11 @@ angular.module('starter.services', ['firebase'])
     },
     get: function(reportId) {
        return reports[reportId];
+    },
+    report_size: function(){
+      reports.$loaded().then(function(){
+        return reports.length;
+      });
     }
   };
 })

@@ -1,16 +1,17 @@
-appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebaseArray, $ionicLoading, Bups) {
+appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebaseArray, $ionicLoading, Bups, Reports) {
   $ionicLoading.show({
       template: '로딩 중...'
     }).then(function(){
-       console.log("The loading indicator is now displayed");
     });
 
   $scope.bups = Bups.all();
 
+
   $scope.bups.$loaded()
   .then(function(data) {
     $ionicLoading.hide().then(function(){
-       console.log("The loading indicator is now hidden");
+      $scope.badge = Reports.all();
+      console.log($scope.badge.length);
     });
   })
   .catch(function(error) {
@@ -29,6 +30,7 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
   $scope.slideChanged = function(index) {
     $scope.slideIndex = index;
   };
+
 
 
 
