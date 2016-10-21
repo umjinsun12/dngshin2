@@ -36,9 +36,77 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
 
 })
 
-.controller('BupCtrl', function($scope, $stateParams, Bups, Bup_Comments) {
+.controller('BupCtrl', function($scope, $stateParams, Bups, Bup_Comments, $localstorage, $firebaseArray, $ionicPopup) {
   $scope.bup = Bups.get($stateParams.bupId);
-  $scope.comments = Bup_Comments.get($stateParams.bupId);
+  var bup_comments_ref = firebase.database().ref().child("bupmem").child($scope.bup.uid).child("comments");
+  var bup_comments = $firebaseArray(bup_comments_ref);
+
+
+
+  $scope.bupId = $stateParams.bupId;
+
+  console.log($scope.bup);
+  //comments
+  $scope.rating = 4;
+  $scope.data = {
+    rating : 3,
+    max: 5
+  }
+
+  $scope.comments = bup_comments;
+
+  $scope.send_msg = function(comment, rating){
+    console.log(comment);
+    if(comment == undefined || comment == "")
+    {
+      console.log("내용이 없당");
+      $ionicPopup.alert({
+        title : '경고',
+        template: '내용을 입력하세요.'
+      });
+    }
+    else {
+      var flag = 0;
+      for(var i=0; i < bup_comments.length ; i++)
+      {
+        if(bup_comments[i].uid == $localstorage.get("authuserData"))
+        {
+          flag = 1;
+        }
+      }
+
+      bup_comments.$add({
+        uid : $localstorage.get("authuserData"),
+        content : comment,
+        rating : rating
+      });
+      $ionicPopup.alert({
+        title : '알림',
+        template: '후기가 등록 되었습니다.'
+      });
+
+      if(flag == 1){
+        $ionicPopup.alert({
+          title : '경고',
+          template: '이미 후기를 작성하셨습니다.'
+        });
+      }else{
+        bup_comments.$add({
+          uid : $localstorage.get("authuserData"),
+          content : comment,
+          rating : rating
+        });
+        $ionicPopup.alert({
+          title : '알림',
+          template: '후기가 등록 되었습니다.'
+        });
+      }
+    }
+  };
+
+  bup_comments.$loaded(function(){
+
+  });
 })
 
 

@@ -70,6 +70,26 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
         controller: 'BupCtrl'
       }
     }
+  })
+
+  .state('tab.bup-comments', {
+    url: '/home/:bupId/comments',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_buptalk/bup-comment.html',
+        controller: 'BupCtrl'
+      }
+    }
+  })
+
+  .state('tab.comments-detail', {
+    url: '/home/:bupId/comment_detail',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/tab_buptalk/comment-detail.html',
+        controller: 'BupCtrl'
+      }
+    }
   });
 
   //환경설정 정보

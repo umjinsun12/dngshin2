@@ -1,0 +1,42 @@
+<ion-view view-title="고객후기">
+  <ion-content>
+    <div class="review_bg">
+
+    <div class="bup_review_point row">
+      <div class="point col-10">평점</div>
+      <div class="col">
+        <i class="star_red icon ion-android-star"></i>
+        <i class="star_red icon ion-android-star"></i>
+        <i class="star_red icon ion-android-star"></i>
+        <i class="star_red icon ion-android-star-outline"></i>
+        <i class="star_red icon ion-android-star-outline"></i>
+        <i class="star_red">{{bup.total_point}}</i>
+      </div>
+      <div>
+        평가횟수
+        <i class="star_red">{{comments.length}}건</i>
+      </div>
+    </div>
+
+    <div class="bup_review_detail" ng-repeat="comment in comments" ng-show="$index < 3">
+      <div class="row">
+        <div class="col detail_id">익명</div>
+        <div>
+          <i class="star_red icon ion-android-star"></i>
+          <i class="star_red icon ion-android-star"></i>
+          <i class="star_red icon ion-android-star"></i>
+          <i class="star_red icon ion-android-star-outline"></i>
+          <i class="star_red icon ion-android-star-outline"></i>
+          <i class="star_red">{{comment.rating}}점</i>
+        </div>
+      </div>
+
+      <div class="row bup_review_content">
+        {{comment.content}}
+      </div>
+    </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

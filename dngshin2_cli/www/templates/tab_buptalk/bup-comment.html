@@ -1,0 +1,18 @@
+<ion-view view-title="법무사 평가하기">
+  <ion-content>
+    <div class="main_bg">
+      <div class="star_box">
+          <h1>{{data.rating}}점</h1>
+          <rating ng-model="data.rating" max="data.max" ></rating>
+          <h5>법무사님의 별점을 선택해주세요.</h5>
+      </div>
+      <div class="comment_box">
+          <textarea ng-model="comment" class="comment_input" rows="10" cols="10" placeholder="평가내용을 작성해 주세요."></textarea>
+
+          <button class="comment_btn col button button-outline button-assertive" ng-click="send_msg(comment,data.rating)">메시지 보내기</button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -20,6 +20,7 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
   $ionicConfigProvider.backButton.text('');
   $ionicConfigProvider.backButton.text('').icon('ion-ios7-arrow-left');
   $ionicConfigProvider.navBar.alignTitle('center');
+  $ionicConfigProvider.backButton.previousTitleText(false);
 
   $stateProvider
 

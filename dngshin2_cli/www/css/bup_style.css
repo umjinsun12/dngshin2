@@ -1,0 +1,45 @@
+ul.rating li {
+  display: inline;
+  border: 0px;
+  background: none;
+  padding: 5px 10px;
+}
+ul.rating li i {
+  font-size: 45px;
+  color : #CA3034;
+}
+
+.star_box{
+  text-align: center;
+  background-color: white;
+  margin-top: 20px;
+  border-bottom: 1px solid #D3D4D3;
+  padding-bottom: 15px;
+}
+
+.comment_box{
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #D3D4D3;
+}
+
+.comment_input{
+  width: 100%;
+  border: 1px solid #D3D4D3;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.comment_btn{
+  margin-top: 20px;
+  background-color: white !important;
+}
+
+.bup_review_content{
+  margin-top: 10px !important;
+}
+
+.review_bg{
+  padding: 20px;
+}

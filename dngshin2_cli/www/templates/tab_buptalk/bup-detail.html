@@ -27,9 +27,9 @@
         <div class="title col">
           고객후기
         </div>
-        <div class="more">
+        <a class="more" href="#/tab/home/{{bupId}}/comment_detail">
           + 더보기
-        </div>
+        </a>
       </div>
 
       <div class="bup_review_point row">
@@ -38,39 +38,37 @@
           <i class="star_red icon ion-android-star"></i>
           <i class="star_red icon ion-android-star"></i>
           <i class="star_red icon ion-android-star"></i>
-          <i class="star_red icon ion-android-star-half"></i>
+          <i class="star_red icon ion-android-star-outline"></i>
           <i class="star_red icon ion-android-star-outline"></i>
           <i class="star_red">{{bup.total_point}}</i>
         </div>
         <div>
           평가횟수
-          <i class="star_red">{{bup.review_cnt}}건</i>
+          <i class="star_red">{{comments.length}}건</i>
         </div>
       </div>
 
-      <div class="bup_review_detail" ng-repeat="comment in comments">
+      <div class="bup_review_detail" ng-repeat="comment in comments" ng-show="$index < 3">
         <div class="row">
-          <div class="col detail_id">{{comment.usr_id}}</div>
+          <div class="col detail_id">익명</div>
           <div>
             <i class="star_red icon ion-android-star"></i>
             <i class="star_red icon ion-android-star"></i>
             <i class="star_red icon ion-android-star"></i>
-            <i class="star_red icon ion-android-star-half"></i>
             <i class="star_red icon ion-android-star-outline"></i>
-            <i class="star_red">7.5</i>
+            <i class="star_red icon ion-android-star-outline"></i>
+            <i class="star_red">{{comment.rating}}점</i>
           </div>
         </div>
-        <div class="row detail_date">
-          {{comment.date}}/{{comment.time}}
-        </div>
-        <div class="row">
+
+        <div class="row bup_review_content">
           {{comment.content}}
         </div>
       </div>
 
-      <button class="button button-block button-assertive margin-top">
+      <a class="button button-block button-assertive margin-top" href="#/tab/home/{{bupId}}/comments">
         평가하기
-      </button>
+      </a>
 
 
       <div class="bup_select_box">

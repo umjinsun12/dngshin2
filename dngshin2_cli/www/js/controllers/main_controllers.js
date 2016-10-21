@@ -1,4 +1,4 @@
-var appctrl = angular.module('starter.controllers', ['starter.services', 'firebase'])
+var appctrl = angular.module('starter.controllers', ['starter.services', 'firebase','ionic.rating', 'ionic'])
 
 .controller('TabCtrl', function($scope, $state, $firebaseObject, $localstorage, $ionicPopup, $ionicModal, $firebaseAuth, $firebaseArray) {
   $ionicModal.fromTemplateUrl('login-modal.html', {

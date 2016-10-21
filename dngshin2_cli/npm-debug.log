@@ -1,0 +1,97 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'ionic-rating' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose install initial load of /Users/eomjinseob/Desktop/dngshin2/dngshin2_cli/package.json
+5 warn package.json dngshin2_cli@1.1.1 No repository field.
+6 warn package.json dngshin2_cli@1.1.1 No README data
+7 warn package.json dngshin2_cli@1.1.1 No license field.
+8 verbose readDependencies loading dependencies from /Users/eomjinseob/Desktop/dngshin2/dngshin2_cli/package.json
+9 silly cache add args [ 'ionic-rating', null ]
+10 verbose cache add spec ionic-rating
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'ionic-rating',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'ionic-rating',
+11 silly cache add   rawSpec: '',
+11 silly cache add   spec: 'latest',
+11 silly cache add   type: 'tag' }
+12 silly addNamed ionic-rating@latest
+13 verbose addNamed "latest" is being treated as a dist-tag for ionic-rating
+14 info addNameTag [ 'ionic-rating', 'latest' ]
+15 silly mapToRegistry name ionic-rating
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry data Result {
+18 silly mapToRegistry   raw: 'ionic-rating',
+18 silly mapToRegistry   scope: null,
+18 silly mapToRegistry   name: 'ionic-rating',
+18 silly mapToRegistry   rawSpec: '',
+18 silly mapToRegistry   spec: 'latest',
+18 silly mapToRegistry   type: 'tag' }
+19 silly mapToRegistry uri https://registry.npmjs.org/ionic-rating
+20 verbose addNameTag registry:https://registry.npmjs.org/ionic-rating not in flight; fetching
+21 verbose request uri https://registry.npmjs.org/ionic-rating
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 10:24:44
+24 verbose request id 12c2f44e691f554a
+25 http request GET https://registry.npmjs.org/ionic-rating
+26 http 404 https://registry.npmjs.org/ionic-rating
+27 verbose headers { 'content-type': 'application/json',
+27 verbose headers   'cache-control': 'max-age=0',
+27 verbose headers   'content-length': '2',
+27 verbose headers   'accept-ranges': 'bytes',
+27 verbose headers   date: 'Fri, 21 Oct 2016 01:24:45 GMT',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   age: '0',
+27 verbose headers   connection: 'keep-alive',
+27 verbose headers   'x-served-by': 'cache-nrt6124-NRT',
+27 verbose headers   'x-cache': 'MISS',
+27 verbose headers   'x-cache-hits': '0',
+27 verbose headers   'x-timer': 'S1477013084.540575,VS0,VE578',
+27 verbose headers   vary: 'Accept-Encoding' }
+28 silly get cb [ 404,
+28 silly get   { 'content-type': 'application/json',
+28 silly get     'cache-control': 'max-age=0',
+28 silly get     'content-length': '2',
+28 silly get     'accept-ranges': 'bytes',
+28 silly get     date: 'Fri, 21 Oct 2016 01:24:45 GMT',
+28 silly get     via: '1.1 varnish',
+28 silly get     age: '0',
+28 silly get     connection: 'keep-alive',
+28 silly get     'x-served-by': 'cache-nrt6124-NRT',
+28 silly get     'x-cache': 'MISS',
+28 silly get     'x-cache-hits': '0',
+28 silly get     'x-timer': 'S1477013084.540575,VS0,VE578',
+28 silly get     vary: 'Accept-Encoding' } ]
+29 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/ionic-rating
+29 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+29 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+29 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+29 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+29 verbose stack     at emitTwo (events.js:87:13)
+29 verbose stack     at Request.emit (events.js:172:7)
+29 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+29 verbose stack     at emitOne (events.js:82:20)
+29 verbose stack     at Request.emit (events.js:169:7)
+29 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+30 verbose statusCode 404
+31 verbose pkgid ionic-rating
+32 verbose cwd /Users/eomjinseob/Desktop/dngshin2/dngshin2_cli
+33 error Darwin 16.0.0
+34 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "ionic-rating"
+35 error node v4.4.7
+36 error npm  v2.15.8
+37 error code E404
+38 error 404 Registry returned 404 for GET on https://registry.npmjs.org/ionic-rating
+38 error 404
+38 error 404 'ionic-rating' is not in the npm registry.
+38 error 404 You should bug the author to publish it (or use the name yourself!)
+38 error 404 It was specified as a dependency of 'dngshin2_cli'
+38 error 404
+38 error 404 Note that you can also install from a
+38 error 404 tarball, folder, http url, or git url.
+39 verbose exit [ 1, true ]
