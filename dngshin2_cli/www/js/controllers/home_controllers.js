@@ -44,16 +44,17 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
 
 
   $scope.bupId = $stateParams.bupId;
-
-  console.log($scope.bup);
   //comments
   $scope.rating = 4;
   $scope.data = {
     rating : 3,
     max: 5
-  }
+  }  
 
-  $scope.comments = bup_comments;
+
+  $scope.range = function(n){
+    return new Array(n);
+  };
 
   $scope.send_msg = function(comment, rating){
     console.log(comment);
@@ -105,7 +106,12 @@ appctrl.controller('HomeCtrl', function($scope, $ionicSlideBoxDelegate, $firebas
   };
 
   bup_comments.$loaded(function(){
-
+    var sum = 0;
+    for(var i =0 ; i < bup_comments.length ; i++){
+      sum += bup_comments[i].rating;
+    }
+    $scope.total_rating = parseInt(sum/bup_comments.length);
+    $scope.comments = bup_comments.reverse();
   });
 })
 

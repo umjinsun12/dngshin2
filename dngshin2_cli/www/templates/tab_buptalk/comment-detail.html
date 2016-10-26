@@ -1,16 +1,13 @@
 <ion-view view-title="고객후기">
   <ion-content>
-    <div class="review_bg">
+    <div class="list">
 
-    <div class="bup_review_point row">
+    <div class="item item-divider row review_title_box">
       <div class="point col-10">평점</div>
       <div class="col">
-        <i class="star_red icon ion-android-star"></i>
-        <i class="star_red icon ion-android-star"></i>
-        <i class="star_red icon ion-android-star"></i>
-        <i class="star_red icon ion-android-star-outline"></i>
-        <i class="star_red icon ion-android-star-outline"></i>
-        <i class="star_red">{{bup.total_point}}</i>
+        <i class="star_red icon ion-android-star-outline" ng-repeat="a in range(5-total_rating) track by $index"></i>
+        <i class="star_red icon ion-android-star" ng-repeat="a in range(total_rating) track by $index"></i>
+        <i class="star_red">{{total_rating}}점</i>
       </div>
       <div>
         평가횟수
@@ -18,15 +15,12 @@
       </div>
     </div>
 
-    <div class="bup_review_detail" ng-repeat="comment in comments" ng-show="$index < 3">
+    <div class="item" ng-repeat="comment in comments">
       <div class="row">
         <div class="col detail_id">익명</div>
         <div>
-          <i class="star_red icon ion-android-star"></i>
-          <i class="star_red icon ion-android-star"></i>
-          <i class="star_red icon ion-android-star"></i>
-          <i class="star_red icon ion-android-star-outline"></i>
-          <i class="star_red icon ion-android-star-outline"></i>
+          <i class="star_red icon ion-android-star-outline" ng-repeat="a in range(5-comment.rating) track by $index"></i>
+          <i class="star_red icon ion-android-star" ng-repeat="a in range(comment.rating) track by $index"></i>
           <i class="star_red">{{comment.rating}}점</i>
         </div>
       </div>

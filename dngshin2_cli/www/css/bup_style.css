@@ -40,6 +40,7 @@ ul.rating li i {
   margin-top: 10px !important;
 }
 
-.review_bg{
-  padding: 20px;
+.review_title_box{
+  padding: 10px;
+  font-weight: 600;
 }

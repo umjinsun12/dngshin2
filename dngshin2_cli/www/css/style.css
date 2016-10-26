@@ -208,6 +208,7 @@ body { font-family: 'Nanum Gothic', serif; }
 .bup_profile_box{
   padding : 10px 20px 0px 15px;
   height : 120px;
+  margin-bottom: 10px;
 }
 
 .bup_detail_profile{
@@ -216,16 +217,16 @@ body { font-family: 'Nanum Gothic', serif; }
 }
 
 .bup_detail_profile_name{
-  font-size : 18px;
+  font-size : 20px;
   color: #5e5e5e;
-  font-weight : 500;
-  margin-bottom : 5px;
+  font-weight : 600;
+  margin-bottom : 10px;
 }
 
 .bup_detail_profile_companyname{
   font-size : 16px;
   color : #CA3034;
-  font-weight : 500;
+  font-weight : 600;
   margin-bottom : 5px;
 }
 
@@ -272,7 +273,7 @@ body { font-family: 'Nanum Gothic', serif; }
 }
 
 .bup_review_title{
-  margin-bottom : 12px;
+  margin-bottom : 20px;
 }
 
 .bup_review_box{
@@ -285,7 +286,7 @@ body { font-family: 'Nanum Gothic', serif; }
 }
 
 .bup_review_point{
-  margin-bottom : 10px;
+  margin-bottom : 20px;
 }
 
 .bup_review_point .point{
